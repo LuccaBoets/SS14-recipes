@@ -7,27 +7,32 @@ import './../App.css';
 import { getReagentsDTO } from '../utils/reagentsDTO';
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 
-const renderTooltip = (props) => (
+const renderTooltip = (props, content) => (
   <Tooltip id="button-tooltip" {...props}>
     Simple tooltip
   </Tooltip>
 );
 
+const BeakerSVG = ({ color }) => (
+  <svg id="beaker" viewBox="9 11 14 13" style={{ width: "20px", height: "20px", marginRight: "6px" }}>
+    <image href="data/Reagents/beakerlarge.png" width="32" height="32" />
+    <rect id="liquid" x="10.5" y="18" width="11" height="5" fill={color} />
+    <rect id="liquid" x="12.5" y="23" width="7" height="1" fill={color} />
+  </svg>
+);
+
 const ReagentCard = ({ content }) => (
   <Card className='recipeCard' style={{ width: '150px', display: 'block', margin: '10px' }}>
     <Card.Header className='recipeHeader'>
-    <svg id="beaker" viewBox="0 0 100 200">
-        <rect id="liquid" x="25" y="60" width="50" height="100" fill="#ff0000"/>
-        <rect x="25" y="20" width="50" height="160" fill="none" stroke="black" stroke-width="2"/>
-    </svg>
-      <span style={{color: content.color}}>{content.name.replaceAll('-', ' ').replace('reagent name ', '')}</span>
+      <BeakerSVG color={content.color} />
+      {content.name.replaceAll('-', ' ').replace('reagent name ', '')}
 
       <OverlayTrigger
         placement="top"
         delay={{ show: 250, hide: 400 }}
         overlay={renderTooltip}
       >
-        <div style={{float: 'right'}}>
+        <div style={{ float: 'right' }}>
           <BsFillQuestionCircleFill />
         </div>
       </OverlayTrigger>
@@ -36,17 +41,27 @@ const ReagentCard = ({ content }) => (
       {content.hasRecipe && (
         <div>
           <div>
-            {Object.entries(content.recipe.reactants).map(([key, value]) => (
-              <div key={key}>{value.amount} <strong>{key}</strong></div>
+            {content.recipe.map((value) => (
+              <div key={value}>
+                <BeakerSVG color={value.color} />
+                {value.amount} <strong>{value.name}</strong> 
+              </div>
             ))}
           </div>
-          <div><strong>Product Amount:</strong> {content.recipe.products}</div>
+          <div>
+            <strong>Products:</strong>
+            <div key={content.id}>
+              <BeakerSVG color={content.color} />
+              {content.amount} <strong>{content.name}</strong>
+            </div>
+          </div>
         </div>
       )}
     </Card.Body>
   </Card>
 );
 
+// const ReagentCard = ({ content }) => (<div><p>{JSON.stringify(content)}</p></div>);
 
 function Reagents() {
   const [reagents, setReagents] = useState([]);
