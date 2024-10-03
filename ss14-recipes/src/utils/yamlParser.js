@@ -52,3 +52,6 @@ export const fetchMedicineYAML = createYAMLFetcher(REAGENTS_PATH, 'medicine');
 export const fetchMedicineRecipeYAML = createYAMLFetcher(RECIPES_PATH, 'medicine');
 
 export const fetchToxinsYAML = createYAMLFetcher(REAGENTS_PATH, 'toxins');
+export const fetchElementsYAML = createYAMLFetcher(REAGENTS_PATH, 'elements');
+export const fetchNarcoticsYAML = createYAMLFetcher(REAGENTS_PATH, 'narcotics');
+export const fetchPyrotechnicsYAML = createYAMLFetcher(REAGENTS_PATH, 'pyrotechnic');

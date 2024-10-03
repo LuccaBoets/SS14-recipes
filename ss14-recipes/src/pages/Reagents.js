@@ -44,7 +44,7 @@ const ReagentCard = ({ content }) => (
             {content.recipe.map((value) => (
               <div key={value}>
                 <BeakerSVG color={value.color} />
-                {value.amount} <strong>{value.name}</strong> 
+                {value.amount} <strong>{value.name} {value.id}</strong> 
               </div>
             ))}
           </div>
