@@ -1,84 +1,45 @@
-// src/utils/reagents.js
-import {
-    fetchBotanyRecipeYAML,
-    fetchBotanyYAML,
-    fetchChemicalsRecipeYAML,
-    fetchChemicalsYAML,
-    fetchBiologicalsYAML,
-    fetchBiologicalsRecipeYAML,
-    fetchCleaningYAML,
-    fetchCleaningRecipeYAML,
-    fetchFunYAML,
-    fetchFunRecipeYAML,
-    fetchGasesYAML,
-    fetchGasesRecipeYAML,
-    fetchMedicineYAML,
-    fetchMedicineRecipeYAML,
-    fetchToxinsYAML,
-    fetchElementsYAML,
-    fetchNarcoticsYAML,
-    fetchPyrotechnicsYAML
-} from './yamlParser';
+// src/utils/yamlParser.js
+import { reagentFetchers, recipeFetchers } from './yamlParser';
+import { PATHS } from './config';
+import groupsData from './group.json';
 
-// Fetch all YAML data first, then process it into the correct shape
+// Function to fetch all reagents and recipes dynamically
 export const getReagentsDTO = async () => {
-    const [
-        biologicalsReagents, biologicalsRecipes,
-        botanyReagents, botanyRecipes,
-        chemicalsReagents, chemicalsRecipes,
-        cleaningReagents, cleaningRecipes,
-        elementsReagents,
-        funReagents, funRecipes,
-        gasesReagents, gasesRecipes,
-        medicinesReagents, medicinesRecipes,
-        narcoticsReagents,
-        pyrotechnicsReagents,
-        toxinsReagents,
-    ] = await Promise.all([
-        fetchBiologicalsYAML(), fetchBiologicalsRecipeYAML(),
-        fetchBotanyYAML(), fetchBotanyRecipeYAML(),
-        fetchChemicalsYAML(), fetchChemicalsRecipeYAML(),
-        fetchCleaningYAML(), fetchCleaningRecipeYAML(),
-        fetchElementsYAML(),
-        fetchFunYAML(), fetchFunRecipeYAML(),
-        fetchGasesYAML(), fetchGasesRecipeYAML(),
-        fetchMedicineYAML(), fetchMedicineRecipeYAML(),
-        fetchNarcoticsYAML(),
-        fetchPyrotechnicsYAML(),
-        fetchToxinsYAML(),
+  // Dynamically create fetch promises for reagents
+  const reagentPromises = Object.keys(PATHS.reagents).map((key) => reagentFetchers[`fetch${capitalize(key)}YAML`]());
 
-    ]);
+  // Dynamically create fetch promises for recipes
+  const recipePromises = Object.keys(PATHS.recipes).map((key) => recipeFetchers[`fetch${capitalize(key)}RecipeYAML`]());
 
-    // Process all reagents and recipes into the correct shape
-    const reagents = [
-        ...botanyReagents,
-        ...chemicalsReagents,
-        ...biologicalsReagents,
-        ...cleaningReagents,
-        ...funReagents,
-        ...gasesReagents,
-        ...medicinesReagents,
-        ...toxinsReagents,
-        ...elementsReagents,
-        ...narcoticsReagents,
-        ...pyrotechnicsReagents
-    ];
+  // Await all the promises in parallel
+  const [
+    reagentsResults,
+    recipesResults,
+  ] = await Promise.all([
+    Promise.all(reagentPromises), // Fetch all reagents
+    Promise.all(recipePromises),  // Fetch all recipes
+  ]);
 
-    const recipes = [
-        ...botanyRecipes,
-        ...chemicalsRecipes,
-        ...biologicalsRecipes,
-        ...cleaningRecipes,
-        ...funRecipes,
-        ...gasesRecipes,
-        ...medicinesRecipes,
-    ];
+  // Combine all fetched reagents and recipes
+  const reagents = reagentsResults.flat(); // Flatten if needed
+  const recipes = recipesResults.flat();
 
-    // Map and convert all reagents and recipes into the correct format
-    console.log(convertReagents(reagents, recipes));
-    return convertReagents(reagents, recipes);
+  return convertReagents(reagents, recipes);
 };
 
+// Helper function to capitalize keys for dynamic access
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function findGroup(reagentName) {
+  for (const [group, reagents] of Object.entries(groupsData)) {
+      if (reagents.includes(reagentName)) {
+          return group;
+      }
+  }
+  return "Unknown"; // Default if group not found
+}
 
 function convertReagents(reagents, recipes) {
     return reagents.map(reagent => {
@@ -104,10 +65,12 @@ function convertReagents(reagents, recipes) {
             amount = Object.values(matchingRecipe.products)[0]
         }
 
+        const group = findGroup(reagent.id ? reagent.id : '');
+
         return {
             id: reagent.id,
             name: reagent.name ? reagent.name.replaceAll('-', ' ').replace('reagent name ', '') : "Unknown",
-            group: reagent.group ? reagent.group : "Uknown",
+            group: group,
             color: reagent.color,
             amount: amount ? amount : '',
             hasRecipe: Boolean(matchingRecipe),

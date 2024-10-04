@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 import './../App.css';
 import { getReagentsDTO } from '../utils/reagentsDTO';
 import { BsFillQuestionCircleFill } from "react-icons/bs";
+import { test } from '../utils/groups'
 
 const renderTooltip = (props, content) => (
   <Tooltip id="button-tooltip" {...props}>
-    Simple tooltip
+    <span>Group: {content.group}</span>
   </Tooltip>
 );
 
@@ -30,7 +32,7 @@ const ReagentCard = ({ content }) => (
       <OverlayTrigger
         placement="top"
         delay={{ show: 250, hide: 400 }}
-        overlay={renderTooltip}
+        overlay={renderTooltip(null, content)}
       >
         <div style={{ float: 'right' }}>
           <BsFillQuestionCircleFill />
@@ -44,7 +46,7 @@ const ReagentCard = ({ content }) => (
             {content.recipe.map((value) => (
               <div key={value}>
                 <BeakerSVG color={value.color} />
-                {value.amount} <strong>{value.name} {value.id}</strong> 
+                {value.amount} <strong>{value.name}</strong>
               </div>
             ))}
           </div>
@@ -65,19 +67,46 @@ const ReagentCard = ({ content }) => (
 
 function Reagents() {
   const [reagents, setReagents] = useState([]);
+  const [selectedGroup, setSelectedGroup] = useState(''); // State for selected group
+  const uniqueGroups = [...new Set(reagents.filter((a) => a.hasRecipe).map(r => r.group))]; // Get unique groups
 
   useEffect(() => {
     (async () => {
       setReagents(await getReagentsDTO())
+
+      // test().then((value) => {
+      //   console.log(value)
+      // });
+
     })();
   }, []);
+
+  const filteredReagents = reagents.filter((reagent) =>
+    reagent.hasRecipe && (selectedGroup === '' || reagent.group === selectedGroup)
+  );
 
   return (
     <div>
       <h1>Reagents</h1>
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          {selectedGroup || 'Select Group'}
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item onClick={() => setSelectedGroup('')}>All</Dropdown.Item>
+          {uniqueGroups.map((group) => (
+            <Dropdown.Item key={group} onClick={() => setSelectedGroup(group)}>
+              {group}
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+
       <div className='grid'>
-        {reagents
-          .sort((a, b) => b.hasRecipe - a.hasRecipe)
+        {filteredReagents
+          .filter((a) => a.hasRecipe)
           .map(reagent => (
             <ReagentCard key={reagent.id} content={reagent} />
           ))}
