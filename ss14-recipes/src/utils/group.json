@@ -231,7 +231,6 @@
     "FerrochromicAcid",
     "FluorosulfuricAcid",
     "SulfuricAcid",
-    "UnstableMutagen",
     "HeartbreakerToxin",
     "Lexorin",
     "MindbreakerToxin",
@@ -366,7 +365,8 @@
     "Sedin",
     "WeedKiller",
     "Ammonia",
-    "Diethylamine"
+    "Diethylamine",
+    "UnstableMutagen"
   ],
   "fun": [
     "Carpetium",

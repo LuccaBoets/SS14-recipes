@@ -1,78 +1,88 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState, useCallback } from 'react';
 import Diagram, { createSchema, useSchema } from 'beautiful-react-diagrams';
-import yaml from 'js-yaml';
+import './../App.css';
+import { getReagentsDTO } from '../utils/reagentsDTO';
+import 'beautiful-react-diagrams/styles.css';
+import { useParams } from 'react-router-dom';
 
-const CustomNode = (props) => {
-  const { inputs } = props;
-//   const { content } = props;
+function RecipeShowLeft(reagents, nodes, links, base, xRecipe, yRecipe, previousNodeName) {
+  let currentReagentItem = reagents.find(r => r.id == base.id)
 
-  return (
-    <div style={{ background: '#717EC3', borderRadius: '10px' }}>
-      <div style={{ padding: '10px', color: 'white' }}>
-        Custom 
-        {/* {content} */}
-      </div>
-      <div style={{ marginTop: '20px' }}>
-        {inputs.map((port) => React.cloneElement(port, {
-          style: { width: '50px', height: '25px', background: '#1B263B' }
-        }))}
-      </div>
-    </div>
-  );
-};
+  let nodeName = `node-${currentReagentItem.id})${previousNodeName}`;
 
-const initialSchema = createSchema({
-  nodes: [
-    {
-      id: 'node-1',
-      content: 'Node 1',
-      coordinates: [100, 100],
-      outputs: [{ id: 'port-1', alignment: 'right' }],
-    },
-    {
-      id: 'node-custom',
-      content: "jaja",
-      coordinates: [100, 100],
-      render: CustomNode,
-      inputs: [{ id: 'custom-port-1', alignment: 'left' }],
-    },
-  ],
-  links: [
-    { input: 'port-1',  output: 'custom-port-1' },
-  ]
-});
+  nodes.push({
+    id: nodeName,
+    content: currentReagentItem.name,
+    coordinates: [xRecipe * 200, yRecipe * 100]
+  });
 
-const UncontrolledDiagram = () => {
-  const [schema, { onChange }] = useSchema(initialSchema);
+  if (previousNodeName != "base") {
+    links.push({
+      input: nodeName,
+      output: previousNodeName,
+      readonly: true
+    });
+  }
 
-  return (
-    <div>
-      <Diagram schema={schema} onChange={onChange} style={{backgroundColor: '#282c34', border: 'none', height: '500px'}}/>
-    </div>
-  );
-};
+  xRecipe -= 1;
 
-var test = {}
+  if (currentReagentItem.hasRecipe) {
+    currentReagentItem.recipe.forEach((recipeItem, recipeIndex) => {
+      RecipeShowLeft(reagents, nodes, links, recipeItem, xRecipe, yRecipe, nodeName);
+      yRecipe -= 1
+    })
+  }
+}
 
-function Recipe() {
-  const [parsedData, setParsedData] = useState(null);
+const RecipeDiagram = ({ reagents, recipeName }) => {
+  const [schema, { onChange }] = useSchema(createSchema({ nodes: [], links: [] }));
 
   useEffect(() => {
-    fetch('data/Food/meat.yml') // Adjust the path according to where you place the file
-      .then(response => response.text())
-      .then(yamlText => {
-        const parsed = yaml.load(yamlText);
-        setParsedData(parsed);
-        console.log(parsed)        
-      })
-      .catch(e => console.error('Failed to load YAML:', e));
+    const nodes = [];
+    const links = [];
+
+    let reagentItem = reagents.find(r => r.id == recipeName)
+    let xRecipe = 5;
+    let yRecipe = 4;
+
+    RecipeShowLeft(reagents, nodes, links, reagentItem, xRecipe, yRecipe, "base")
+  
+    onChange({ nodes, links });
+
+  }, [reagents, onChange]);
+
+  return (
+    <div style={{ height: '3000px', width: '3000px' }} >
+      <Diagram schema={schema} onChange={onChange} />
+    </div>
+  );
+};
+
+function Recipe() {
+  const [reagents, setReagents] = useState([]);
+  const { recipeName } = useParams(); 
+
+  
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const fetchedReagents = await getReagentsDTO();
+        if (fetchedReagents && Array.isArray(fetchedReagents)) {
+          setReagents(fetchedReagents); // Set all reagents
+        } else {
+          console.error('Invalid reagents data:', fetchedReagents);
+        }
+      } catch (error) {
+        console.error('Error fetching reagents:', error);
+      }
+    })();
   }, []);
 
   return (
     <div>
-        <h1>Home</h1>
-        <UncontrolledDiagram />
+      <h1>All Reagents and Recipes Diagram</h1>
+      {reagents.length > 0 ? <RecipeDiagram reagents={reagents} recipeName={recipeName} /> : <p>Loading...</p>}
     </div>
   );
 }

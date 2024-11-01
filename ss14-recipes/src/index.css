@@ -25,6 +25,14 @@ body {
   border: #1A1A1A !important;
   background-color: #282828 !important;
   color:white !important;
+  position: relative; /* This allows the absolute positioning of the overlay to work correctly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Horizontal offset, vertical offset, blur radius, color */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+  border:#1A1A1A 3px solid;
+}
+
+.recipeCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Increased shadow on hover */
 }
 
 .recipeHeader {
@@ -33,4 +41,10 @@ body {
   background-color: #393939 !important;
   color:white !important;
 
+}
+
+.bi-diagram {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
