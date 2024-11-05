@@ -2,6 +2,7 @@
   "name": "ss14-recipes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://luccaboets.github.io/SS14-recipes/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
