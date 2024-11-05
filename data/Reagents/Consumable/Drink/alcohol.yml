@@ -1,3 +1,6 @@
+
+# Base Alcohol
+
 - type: reagent
   id: Absinthe
   name: reagent-name-absinthe
@@ -15,11 +18,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.3
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.3
 
 - type: reagent
   id: Ale
@@ -72,11 +75,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.1
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.1
 
 - type: reagent
   id: BlueHawaiian
@@ -92,11 +95,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Cognac
@@ -116,11 +119,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: DeadRum
@@ -139,11 +142,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Ethanol
@@ -159,47 +162,47 @@
   metabolisms:
     Alcohol:
       effects:
-        - !type:HealthChange
-          conditions:
-            - !type:ReagentThreshold
-              min: 15
-            - !type:OrganType
-              type: Dwarf
-              shouldHave: false
-          damage:
-            types:
-              Poison: 1
-        # dwarves take less toxin damage and heal a marginal amount of brute
-        - !type:HealthChange
-          conditions:
-            - !type:ReagentThreshold
-              min: 15
-            - !type:OrganType
-              type: Dwarf
-          damage:
-            types:
-              Poison: 0.2
-        - !type:HealthChange
-          conditions:
-            - !type:ReagentThreshold
-              min: 15
-            - !type:OrganType
-              type: Dwarf
-          damage:
-            groups:
-              Brute: -1
-        - !type:ChemVomit
-          probability: 0.04
-          conditions:
-            - !type:ReagentThreshold
-              reagent: Ethanol
-              min: 12
-            # dwarves immune to vomiting from alcohol
-            - !type:OrganType
-              type: Dwarf
-              shouldHave: false
-        - !type:Drunk
-          boozePower: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        - !type:OrganType
+          type: Dwarf
+          shouldHave: false
+        damage:
+          types:
+            Poison: 1
+      # dwarves take less toxin damage and heal a marginal amount of brute
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        - !type:OrganType
+          type: Dwarf
+        damage:
+          types:
+            Poison: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        - !type:OrganType
+          type: Dwarf
+        damage:
+          groups:
+            Brute: -1
+      - !type:ChemVomit
+        probability: 0.04
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Ethanol
+          min: 12
+        # dwarves immune to vomiting from alcohol
+        - !type:OrganType
+          type: Dwarf
+          shouldHave: false
+      - !type:Drunk
+        boozePower: 2
 
 - type: reagent
   id: Gin
@@ -219,11 +222,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: CoffeeLiqueur
@@ -287,17 +290,17 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.05
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.05
     Poison:
       effects:
-        - !type:HealthChange
-          damage:
-            types:
-              Poison: 1
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
 
 - type: reagent
   id: Rum
@@ -317,11 +320,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Sake
@@ -349,11 +352,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Vermouth
@@ -388,11 +391,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Whiskey
@@ -412,11 +415,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Wine
@@ -452,11 +455,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 3
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.3
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.3
   fizziness: 0.8
 
 # Mixed Alcohol
@@ -553,11 +556,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: AtomicBomb
@@ -576,14 +579,14 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
-        - !type:AdjustReagent
-          reagent: Uranium
-          amount: 0.05
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
+      - !type:AdjustReagent
+        reagent: Uranium
+        amount: 0.05
 
 - type: reagent
   id: B52
@@ -602,11 +605,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: BahamaMama
@@ -670,11 +673,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
   fizziness: 0.3
 
 - type: reagent
@@ -694,11 +697,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: BloodyMary
@@ -716,7 +719,7 @@
   metamorphicChangeColor: true
 
 - type: reagent
-  id: Booger
+  id:  Booger
   name: reagent-name-booger
   parent: BaseAlcohol
   desc: reagent-desc-booger
@@ -747,11 +750,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: CoconutRum
@@ -767,11 +770,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Cosmopolitan
@@ -787,11 +790,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: CubaLibre
@@ -810,11 +813,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.2
 
 - type: reagent
@@ -865,22 +868,22 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:SatiateHunger
-          factor: -2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.05
+      - !type:SatiateThirst
+        factor: 2
+      - !type:SatiateHunger
+        factor: -2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.05
     Medicine:
       effects:
-        - !type:HealthChange
-          damage:
-            groups:
-              Burn: -1
-              Brute: -1
-              Airloss: -1
-              Toxin: -1
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -1
+            Brute: -1
+            Airloss: -1
+            Toxin: -1
 
 - type: reagent
   id: DriestMartini
@@ -899,11 +902,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: ErikaSurprise
@@ -938,11 +941,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: GinFizz
@@ -961,11 +964,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.4 # A little high, but it has fizz in the name
 
 - type: reagent
@@ -985,11 +988,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.4
 
 - type: reagent
@@ -1009,11 +1012,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Grog
@@ -1087,11 +1090,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: IrishCream
@@ -1110,11 +1113,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: IrishCoffee
@@ -1133,11 +1136,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: LongIslandIcedTea
@@ -1156,11 +1159,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: Manhattan
@@ -1240,11 +1243,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: Mead
@@ -1295,11 +1298,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.25
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.25
 
 - type: reagent
   id: Neurotoxin
@@ -1318,17 +1321,17 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.25
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.25
     Poison:
       effects:
-        - !type:HealthChange
-          damage:
-            types:
-              Poison: 1
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
 
 - type: reagent
   id: Painkiller
@@ -1344,11 +1347,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: Patron
@@ -1367,11 +1370,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.2
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
 
 - type: reagent
   id: RedMead
@@ -1433,11 +1436,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
 
 - type: reagent
   id: CogChamp
@@ -1482,11 +1485,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:GenericStatusEffect
-          key: Muted
-          component: Muted
-        - !type:SatiateThirst
-          factor: 2
+      - !type:GenericStatusEffect
+        key: Muted
+        component: Muted
+      - !type:SatiateThirst
+        factor: 2
 
 - type: reagent
   id: Singulo
@@ -1568,11 +1571,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: TheMartinez
@@ -1607,14 +1610,14 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
-        - !type:AdjustReagent
-          reagent: Uranium
-          amount: 0.05
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
+      - !type:AdjustReagent
+        reagent: Uranium
+        amount: 0.05
 
 - type: reagent
   id: ToxinsSpecial
@@ -1648,11 +1651,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: VodkaTonic
@@ -1671,11 +1674,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.4
 
 - type: reagent
@@ -1695,11 +1698,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.3
 
 - type: reagent
@@ -1719,11 +1722,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.07
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
   fizziness: 0.4
 
 - type: reagent
@@ -1761,11 +1764,11 @@
   metabolisms:
     Drink:
       effects:
-        - !type:SatiateThirst
-          factor: 2
-        - !type:AdjustReagent
-          reagent: Ethanol
-          amount: 0.15
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.15
 
 - type: reagent
   id: VodkaRedBool

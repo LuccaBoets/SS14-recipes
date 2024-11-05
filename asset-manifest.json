@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9596a78b.css",
-    "main.js": "/static/js/main.fb74972d.js",
-    "static/js/453.bacb4ff4.chunk.js": "/static/js/453.bacb4ff4.chunk.js",
-    "index.html": "/index.html",
-    "main.9596a78b.css.map": "/static/css/main.9596a78b.css.map",
-    "main.fb74972d.js.map": "/static/js/main.fb74972d.js.map",
-    "453.bacb4ff4.chunk.js.map": "/static/js/453.bacb4ff4.chunk.js.map"
+    "main.css": "/SS14-recipes/static/css/main.9116c0f0.css",
+    "main.js": "/SS14-recipes/static/js/main.c74cf73a.js",
+    "static/js/453.bacb4ff4.chunk.js": "/SS14-recipes/static/js/453.bacb4ff4.chunk.js",
+    "index.html": "/SS14-recipes/index.html",
+    "main.9116c0f0.css.map": "/SS14-recipes/static/css/main.9116c0f0.css.map",
+    "main.c74cf73a.js.map": "/SS14-recipes/static/js/main.c74cf73a.js.map",
+    "453.bacb4ff4.chunk.js.map": "/SS14-recipes/static/js/453.bacb4ff4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9596a78b.css",
-    "static/js/main.fb74972d.js"
+    "static/css/main.9116c0f0.css",
+    "static/js/main.c74cf73a.js"
   ]
 }
