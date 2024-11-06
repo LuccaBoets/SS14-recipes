@@ -5,33 +5,54 @@ import { getReagentsDTO } from '../utils/reagentsDTO';
 import 'beautiful-react-diagrams/styles.css';
 import { useParams } from 'react-router-dom';
 
-function RecipeShowLeft(reagents, nodes, links, base, xRecipe, yRecipe, previousNodeName) {
-  let currentReagentItem = reagents.find(r => r.id == base.id)
+// function RecipeShowLeft(reagents, nodes, links, base, xRecipe, yRecipe, previousNodeName) {
+//   let currentReagentItem = reagents.find(r => r.id == base.id)
 
-  let nodeName = `node-${currentReagentItem.id})${previousNodeName}`;
+//   let nodeName = `node-${currentReagentItem.id})${previousNodeName}`;
 
-  nodes.push({
-    id: nodeName,
-    content: currentReagentItem.name,
-    coordinates: [xRecipe * 200, yRecipe * 100]
-  });
+//   nodes.push({
+//     id: nodeName,
+//     content: currentReagentItem.name,
+//     coordinates: [xRecipe * 200, yRecipe * 100]
+//   });
 
-  if (previousNodeName != "base") {
-    links.push({
-      input: nodeName,
-      output: previousNodeName,
-      readonly: true
-    });
-  }
+//   if (previousNodeName != "base") {
+//     links.push({
+//       input: nodeName,
+//       output: previousNodeName,
+//       readonly: true
+//     });
+//   }
 
-  xRecipe -= 1;
+//   xRecipe -= 1;
 
+//   if (currentReagentItem.hasRecipe) {
+//     currentReagentItem.recipe.forEach((recipeItem, recipeIndex) => {
+//       RecipeShowLeft(reagents, nodes, links, recipeItem, xRecipe, yRecipe, nodeName);
+//       yRecipe -= 1
+//     })
+//   }
+// }
+
+function linkage(reagents, reagentItem, nameSalt) {
+  reagentItem = reagents.find(r => r.id == base.id)
+
+  let nodeName = `node-${reagentItem.id})${nameSalt}`;
+
+  let children = []
   if (currentReagentItem.hasRecipe) {
     currentReagentItem.recipe.forEach((recipeItem, recipeIndex) => {
-      RecipeShowLeft(reagents, nodes, links, recipeItem, xRecipe, yRecipe, nodeName);
-      yRecipe -= 1
+      children.push(linkage())
     })
   }
+
+  let node = {
+    name: nodeName,
+    content: reagentItem.name,
+    children: children
+  }
+
+  return node;
 }
 
 const RecipeDiagram = ({ reagents, recipeName }) => {
@@ -45,8 +66,9 @@ const RecipeDiagram = ({ reagents, recipeName }) => {
     let xRecipe = 5;
     let yRecipe = 4;
 
-    RecipeShowLeft(reagents, nodes, links, reagentItem, xRecipe, yRecipe, "base")
-  
+    // RecipeShowLeft(reagents, nodes, links, reagentItem, xRecipe, yRecipe, "base")
+    let linkageNodes = linkage(reagents)
+
     onChange({ nodes, links });
 
   }, [reagents, onChange]);
@@ -60,9 +82,9 @@ const RecipeDiagram = ({ reagents, recipeName }) => {
 
 function Recipe() {
   const [reagents, setReagents] = useState([]);
-  const { recipeName } = useParams(); 
+  const { recipeName } = useParams();
 
-  
+
 
   useEffect(() => {
     (async () => {
