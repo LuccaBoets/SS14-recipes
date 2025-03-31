@@ -220,6 +220,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 4
@@ -229,6 +237,14 @@
                         },
                         {
                             "!type:ChemVomit": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "probability": 0.25
                             }
                         }
@@ -797,6 +813,12 @@
                                 "conditions": [
                                     {
                                         "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
                                             "type": "Rat",
                                             "shouldHave": false
                                         }
@@ -820,6 +842,12 @@
                             "!type:ChemVomit": {
                                 "probability": 0.12,
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:OrganType": {
                                             "type": "Rat",
@@ -983,6 +1011,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Caustic": 1,
@@ -1134,6 +1170,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Heat": 1.5
@@ -1148,6 +1192,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 5
@@ -1260,6 +1310,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2,
@@ -1280,6 +1338,14 @@
                         },
                         {
                             "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "emote": "Scream",
                                 "probability": 0.15
                             }
@@ -1326,6 +1392,12 @@
                             "!type:ChemVomit": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 6
                                         }
@@ -1341,6 +1413,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 6
@@ -1502,6 +1580,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2
@@ -1531,6 +1617,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:OrganType": {
                                             "type": "Arachnid",
@@ -1604,6 +1696,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Caustic": 0.5,
@@ -1672,6 +1772,12 @@
                                 "conditions": [
                                     {
                                         "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
                                             "type": "Arachnid",
                                             "shouldHave": true
                                         }
@@ -1722,6 +1828,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 0.05
@@ -1731,6 +1845,14 @@
                         },
                         {
                             "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "emote": "Scream",
                                 "probability": 0.05
                             }
@@ -1761,6 +1883,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -1848,6 +1978,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1.5
@@ -2062,7 +2200,7 @@
             "tileReactions": [
                 {
                     "!type:CreateEntityTileReaction": {
-                        "entity": "MobBee",
+                        "entity": "MobAngryBee",
                         "usage": 2,
                         "maxOnTile": 2,
                         "randomOffsetMax": 0.3,
@@ -2198,6 +2336,34 @@
                                     }
                                 },
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:HasTag": {
+                                            "invert": true,
+                                            "tag": "Bee"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "damage": {
+                                    "types": {
+                                        "Piercing": 2
+                                    }
+                                },
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    },
                                     {
                                         "!type:HasTag": {
                                             "invert": true,
@@ -2591,6 +2757,62 @@
         },
         {
             "type": "reagent",
+            "id": "JuiceThatMakesYouHew",
+            "name": "reagent-name-hew",
+            "group": "Toxins",
+            "desc": "reagent-desc-hew",
+            "physicalDesc": "reagent-physical-desc-inversed",
+            "flavor": "hew",
+            "color": "#a64dc5",
+            "metabolisms": {
+                "Poison": {
+                    "metabolismRate": 0.25,
+                    "effects": [
+                        {
+                            "!type:Emote": {
+                                "emote": "Hew",
+                                "showInChat": true,
+                                "force": true,
+                                "probability": 0.5
+                            }
+                        },
+                        {
+                            "!type:Polymorph": {
+                                "prototype": "ArtifactLizard",
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Animal",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 50
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:AdjustReagent": {
+                                "reagent": "JuiceThatMakesYouHew",
+                                "amount": -20,
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 50
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
             "id": "Oxygen",
             "name": "reagent-name-oxygen",
             "desc": "reagent-desc-oxygen",
@@ -2608,6 +2830,17 @@
                                     {
                                         "!type:OrganType": {
                                             "type": "Human"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:Oxygenate": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
                                         }
                                     }
                                 ]
@@ -2726,6 +2959,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 3
@@ -2745,6 +2986,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "scaleByQuantity": true,
                                 "ignoreResistances": true,
                                 "damage": {
@@ -2896,6 +3145,12 @@
                                         }
                                     },
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 0.5
                                         }
@@ -3028,7 +3283,8 @@
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "NitrousOxide",
-                                            "min": 0.2
+                                            "min": 0.2,
+                                            "max": 0.5
                                         }
                                     },
                                     {
@@ -3044,27 +3300,6 @@
                             }
                         },
                         {
-                            "!type:Emote": {
-                                "conditions": [
-                                    {
-                                        "!type:ReagentThreshold": {
-                                            "reagent": "NitrousOxide",
-                                            "min": 0.2
-                                        }
-                                    },
-                                    {
-                                        "!type:OrganType": {
-                                            "type": "Slime",
-                                            "shouldHave": false
-                                        }
-                                    }
-                                ],
-                                "emote": "Scream",
-                                "showInChat": true,
-                                "probability": 0.01
-                            }
-                        },
-                        {
                             "!type:PopupMessage": {
                                 "conditions": [
                                     {
@@ -3077,6 +3312,12 @@
                                         "!type:OrganType": {
                                             "type": "Slime",
                                             "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
                                         }
                                     }
                                 ],
@@ -3102,6 +3343,12 @@
                                             "type": "Slime",
                                             "shouldHave": false
                                         }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
                                     }
                                 ],
                                 "walkSpeedModifier": 0.65,
@@ -3112,9 +3359,15 @@
                             "!type:GenericStatusEffect": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "reagent": "NitrousOxide",
-                                            "min": 1.8
+                                            "min": 1
                                         }
                                     },
                                     {
@@ -3122,17 +3375,29 @@
                                             "type": "Slime",
                                             "shouldHave": false
                                         }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
                                     }
                                 ],
                                 "key": "ForcedSleep",
                                 "component": "ForcedSleeping",
-                                "time": 3,
+                                "time": 200,
                                 "type": "Add"
                             }
                         },
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "NitrousOxide",
@@ -3174,6 +3439,34 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "Frezon",
@@ -3261,6 +3554,479 @@
         },
         {
             "type": "reagent",
+            "id": "BZ",
+            "name": "reagent-name-bz",
+            "desc": "reagent-desc-bz",
+            "physicalDesc": "reagent-physical-desc-gaseous",
+            "flavor": "bitter",
+            "color": "#9370db",
+            "metabolisms": {
+                "Gas": {
+                    "effects": [
+                        {
+                            "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 0.2
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
+                                "emote": "Cough",
+                                "showInChat": true,
+                                "probability": 0.1
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 0.5
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
+                                "scaleByQuantity": true,
+                                "ignoreResistances": true,
+                                "damage": {
+                                    "types": {
+                                        "Asphyxiation": 10,
+                                        "Poison": 2.5
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
+                                "key": "SeeingRainbows",
+                                "component": "SeeingRainbows",
+                                "type": "Add",
+                                "time": 150,
+                                "refresh": false
+                            }
+                        },
+                        {
+                            "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 0.2
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": true
+                                        }
+                                    }
+                                ],
+                                "emote": "Laugh",
+                                "showInChat": true,
+                                "probability": 0.1
+                            }
+                        },
+                        {
+                            "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 0.2
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": true
+                                        }
+                                    }
+                                ],
+                                "emote": "Scream",
+                                "showInChat": true,
+                                "probability": 0.01
+                            }
+                        },
+                        {
+                            "!type:PopupMessage": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 0.5
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": true
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
+                                    }
+                                ],
+                                "type": "Local",
+                                "visualType": "Medium",
+                                "messages": [
+                                    "effect-sleepy"
+                                ],
+                                "probability": 0.1
+                            }
+                        },
+                        {
+                            "!type:MovespeedModifier": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": true
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
+                                    }
+                                ],
+                                "walkSpeedModifier": 0.65,
+                                "sprintSpeedModifier": 0.65
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "BZ",
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Slime",
+                                            "shouldHave": true
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
+                                    }
+                                ],
+                                "key": "ForcedSleep",
+                                "component": "ForcedSleeping",
+                                "time": 10,
+                                "type": "Add"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
+            "id": "Healium",
+            "name": "reagent-name-healium",
+            "desc": "reagent-desc-healium",
+            "physicalDesc": "reagent-physical-desc-gaseous",
+            "flavor": "strange",
+            "color": "#90560b",
+            "metabolisms": {
+                "Gas": {
+                    "effects": [
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Healium",
+                                            "max": 15
+                                        }
+                                    }
+                                ],
+                                "scaleByQuantity": true,
+                                "ignoreResistances": true,
+                                "damage": {
+                                    "groups": {
+                                        "Burn": -2,
+                                        "Toxin": -5,
+                                        "Brute": -2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Healium",
+                                            "min": 15
+                                        }
+                                    }
+                                ],
+                                "ignoreResistances": true,
+                                "damage": {
+                                    "groups": {
+                                        "Burn": -12,
+                                        "Toxin": -25,
+                                        "Brute": -12
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:PopupMessage": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Healium",
+                                            "min": 4
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.1
+                                        }
+                                    }
+                                ],
+                                "type": "Local",
+                                "visualType": "Medium",
+                                "messages": [
+                                    "effect-sleepy"
+                                ],
+                                "probability": 0.01
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Healium",
+                                            "min": 8
+                                        }
+                                    },
+                                    {
+                                        "!type:BloodReagentThreshold": {
+                                            "reagent": "NitrosylPlasmide",
+                                            "max": 0.01
+                                        }
+                                    }
+                                ],
+                                "key": "ForcedSleep",
+                                "component": "ForcedSleeping",
+                                "time": 1,
+                                "type": "Add"
+                            }
+                        },
+                        {
+                            "!type:Drunk": {
+                                "boozePower": 50,
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Healium",
+                                            "min": 4
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
+            "id": "Nitrium",
+            "name": "reagent-name-nitrium",
+            "desc": "reagent-desc-nitrium",
+            "physicalDesc": "reagent-physical-desc-gaseous",
+            "flavor": "sour",
+            "color": "#90560B",
+            "metabolisms": {
+                "Gas": {
+                    "effects": [
+                        {
+                            "!type:NitriumMovespeedModifier": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Nitrium",
+                                            "min": 3
+                                        }
+                                    }
+                                ],
+                                "walkSpeedModifier": 1.25,
+                                "sprintSpeedModifier": 1.25
+                            }
+                        },
+                        {
+                            "!type:AddReagentToBlood": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Nitrium",
+                                            "min": 6
+                                        }
+                                    }
+                                ],
+                                "reagent": "NitrosylPlasmide",
+                                "amount": 2.5
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Nitrium",
+                                            "min": 8
+                                        }
+                                    }
+                                ],
+                                "key": "Stutter",
+                                "component": "StutteringAccent",
+                                "time": 8
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Nitrium",
+                                            "min": 10
+                                        }
+                                    }
+                                ],
+                                "ignoreResistances": true,
+                                "damage": {
+                                    "types": {
+                                        "Asphyxiation": 15
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
+            "id": "Pluoxium",
+            "name": "reagent-name-pluoxium",
+            "desc": "reagent-desc-pluoxium",
+            "physicalDesc": "reagent-physical-desc-gaseous",
+            "flavor": "bitter",
+            "color": "#7b68ee",
+            "metabolisms": {
+                "Gas": {
+                    "effects": [
+                        {
+                            "!type:Oxygenate": {
+                                "factor": 8,
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Human"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:Oxygenate": {
+                                "factor": 8,
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Animal"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:Oxygenate": {
+                                "factor": 8,
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Rat"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:Oxygenate": {
+                                "factor": 8,
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Plant"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "!type:ModifyLungGas": {
+                                "ratios": {
+                                    "CarbonDioxide": 1.0,
+                                    "Pluoxium": -1.0
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
             "id": "Cryptobiolin",
             "name": "reagent-name-cryptobiolin",
             "group": "Medicine",
@@ -3303,7 +4069,7 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Poison": -1
+                                        "Poison": -1.5
                                     }
                                 }
                             }
@@ -3311,6 +4077,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -3355,6 +4127,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -3443,6 +4221,14 @@
                     "effects": [
                         {
                             "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "key": "Drunk",
                                 "time": 6.0,
                                 "type": "Remove"
@@ -3450,6 +4236,14 @@
                         },
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": -0.5
@@ -3480,7 +4274,7 @@
                                         "Radiation": -3
                                     },
                                     "groups": {
-                                        "Brute": 0.5
+                                        "Brute": 1.5
                                     }
                                 }
                             }
@@ -3505,7 +4299,7 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "groups": {
-                                        "Brute": -2
+                                        "Brute": -2.5
                                     }
                                 }
                             }
@@ -3513,6 +4307,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 15
@@ -3530,6 +4330,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -3581,6 +4387,7 @@
                     "!type:PlantCryoxadone": {}
                 }
             ],
+            "worksOnTheDead": true,
             "metabolisms": {
                 "Medicine": {
                     "effects": [
@@ -3593,12 +4400,16 @@
                                         }
                                     }
                                 ],
+                                "scaleByTemperature": {
+                                    "min": 100.0,
+                                    "max": 213.0,
+                                    "scale": 1.6
+                                },
                                 "damage": {
                                     "groups": {
-                                        "Airloss": -6,
-                                        "Brute": -4,
-                                        "Burn": -6,
-                                        "Toxin": -4
+                                        "Airloss": -3,
+                                        "Brute": -3,
+                                        "Burn": -3
                                     }
                                 }
                             }
@@ -3616,6 +4427,7 @@
             "physicalDesc": "reagent-physical-desc-bubbling",
             "flavor": "medicine",
             "color": "#32cd32",
+            "worksOnTheDead": true,
             "metabolisms": {
                 "Medicine": {
                     "effects": [
@@ -3628,6 +4440,11 @@
                                         }
                                     }
                                 ],
+                                "scaleByTemperature": {
+                                    "min": 100.0,
+                                    "max": 213.0,
+                                    "scale": 1.6
+                                },
                                 "damage": {
                                     "types": {
                                         "Cellular": -2
@@ -3655,9 +4472,9 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Heat": -1.5,
-                                        "Shock": -1.5,
-                                        "Cold": -1.5
+                                        "Heat": -2,
+                                        "Shock": -2,
+                                        "Cold": -2
                                     }
                                 }
                             }
@@ -3665,6 +4482,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 10
@@ -3723,6 +4546,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 20
                                         }
@@ -3780,6 +4609,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 25
                                         }
@@ -3830,8 +4665,8 @@
                                         "Poison": -0.5
                                     },
                                     "groups": {
-                                        "Brute": -0.5,
-                                        "Burn": -0.5
+                                        "Brute": -1,
+                                        "Burn": -1
                                     }
                                 }
                             }
@@ -3839,6 +4674,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -3908,6 +4749,12 @@
                                 "component": "IgnoreSlowOnDamage",
                                 "time": 5
                             }
+                        },
+                        {
+                            "!type:MovespeedModifier": {
+                                "walkSpeedModifier": 1.1,
+                                "sprintSpeedModifier": 1.1
+                            }
                         }
                     ]
                 }
@@ -3936,12 +4783,26 @@
                         },
                         {
                             "!type:ChemVomit": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "probability": 0.02
                             }
                         },
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -3985,6 +4846,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 4
@@ -4051,9 +4918,9 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Heat": -0.33,
-                                        "Shock": -0.33,
-                                        "Cold": -0.33
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5
                                     }
                                 }
                             }
@@ -4171,6 +5038,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "probability": 0.3,
                                 "damage": {
                                     "types": {
@@ -4180,25 +5055,15 @@
                             }
                         },
                         {
-                            "!type:HealthChange": {
-                                "conditions": [
-                                    {
-                                        "!type:ReagentThreshold": {
-                                            "min": 30
-                                        }
-                                    }
-                                ],
-                                "damage": {
-                                    "types": {
-                                        "Poison": 3
-                                    }
-                                }
-                            }
-                        },
-                        {
                             "!type:ChemVomit": {
                                 "probability": 0.15,
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -4224,12 +5089,28 @@
                         },
                         {
                             "!type:Emote": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "emote": "Scream",
                                 "probability": 0.2
                             }
                         },
                         {
                             "!type:PopupMessage": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "type": "Local",
                                 "visualType": "Large",
                                 "messages": [
@@ -4272,20 +5153,50 @@
             ],
             "metabolisms": {
                 "Medicine": {
+                    "metabolismRate": 0.1,
                     "effects": [
                         {
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Cellular": -1,
-                                        "Radiation": 1
+                                        "Cellular": -0.3,
+                                        "Radiation": 0.15,
+                                        "Caustic": 0.15
                                     }
                                 }
                             }
                         },
                         {
-                            "!type:ChemVomit": {
-                                "probability": 0.05
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 11
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "types": {
+                                        "Radiation": 0.2
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Arithrazine",
+                                            "min": 1
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "types": {
+                                        "Caustic": 0.3
+                                    }
+                                }
                             }
                         }
                     ]
@@ -4319,6 +5230,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -4436,7 +5353,7 @@
                         },
                         {
                             "!type:ModifyBloodLevel": {
-                                "amount": 6
+                                "amount": 12
                             }
                         }
                     ]
@@ -4493,6 +5410,12 @@
                             "!type:AdjustReagent": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "reagent": "Amatoxin",
                                             "min": 1
@@ -4521,6 +5444,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2
@@ -4617,9 +5548,9 @@
                                     },
                                     "types": {
                                         "Poison": -0.5,
-                                        "Heat": -0.33,
-                                        "Shock": -0.33,
-                                        "Cold": -0.33
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5
                                     }
                                 }
                             }
@@ -4665,10 +5596,10 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "groups": {
-                                        "Burn": -2,
-                                        "Toxin": -2,
-                                        "Airloss": -2,
-                                        "Brute": -2
+                                        "Burn": -3,
+                                        "Toxin": -3,
+                                        "Airloss": -3,
+                                        "Brute": -3
                                     }
                                 }
                             }
@@ -4926,6 +5857,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 16
                                         }
@@ -4970,12 +5907,55 @@
                             "!type:ChemVomit": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 30
                                         }
                                     }
                                 ],
                                 "probability": 0.02
+                            }
+                        },
+                        {
+                            "!type:ChemVomit": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Arithrazine",
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
+                                "probability": 0.1
+                            }
+                        },
+                        {
+                            "!type:PopupMessage": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "reagent": "Arithrazine",
+                                            "min": 1
+                                        }
+                                    }
+                                ],
+                                "type": "Local",
+                                "visualType": "Medium",
+                                "messages": [
+                                    "generic-reagent-effect-nauseous"
+                                ],
+                                "probability": 0.2
                             }
                         }
                     ]
@@ -4998,7 +5978,7 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Slash": -3
+                                        "Slash": -4
                                     }
                                 }
                             }
@@ -5006,6 +5986,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 12
@@ -5049,6 +6035,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 11
                                         }
@@ -5081,7 +6073,7 @@
                             "!type:HealthChange": {
                                 "damage": {
                                     "types": {
-                                        "Blunt": -3.5
+                                        "Blunt": -4
                                     }
                                 }
                             }
@@ -5089,6 +6081,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 10.5
@@ -5160,6 +6158,24 @@
                             "!type:ExtinguishReaction": ""
                         }
                     ]
+                },
+                "Acidic": {
+                    "methods": [
+                        "Touch"
+                    ],
+                    "effects": [
+                        {
+                            "!type:HealthChange": {
+                                "scaleByQuantity": true,
+                                "ignoreResistances": false,
+                                "damage": {
+                                    "types": {
+                                        "Holy": 0.5
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
             },
             "plantMetabolism": [
@@ -5201,6 +6217,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 20
                                         }
@@ -5218,6 +6240,12 @@
                             "!type:ChemVomit": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:ReagentThreshold": {
                                             "min": 15
                                         }
@@ -5229,6 +6257,12 @@
                         {
                             "!type:Emote": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -5284,6 +6318,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 12
@@ -5387,6 +6427,18 @@
                 "Medicine": {
                     "effects": [
                         {
+                            "!type:ModifyBloodLevel": {
+                                "conditions": [
+                                    {
+                                        "!type:Temperature": {
+                                            "max": 213.0
+                                        }
+                                    }
+                                ],
+                                "amount": 10
+                            }
+                        },
+                        {
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
@@ -5395,13 +6447,17 @@
                                         }
                                     }
                                 ],
+                                "scaleByTemperature": {
+                                    "min": 100.0,
+                                    "max": 213.0,
+                                    "scale": 1.6
+                                },
                                 "damage": {
                                     "groups": {
-                                        "Brute": -4,
-                                        "Burn": -5
-                                    },
-                                    "types": {
-                                        "Poison": -2
+                                        "Airloss": -10.0,
+                                        "Brute": -5.0,
+                                        "Burn": -5.0,
+                                        "Toxin": -5.0
                                     }
                                 }
                             }
@@ -5432,11 +6488,16 @@
                                         }
                                     }
                                 ],
+                                "scaleByTemperature": {
+                                    "min": 100.0,
+                                    "max": 213.0,
+                                    "scale": 1.6
+                                },
                                 "damage": {
                                     "types": {
-                                        "Heat": -3.0,
-                                        "Shock": -3.0,
-                                        "Caustic": -1.0
+                                        "Heat": -10.0,
+                                        "Shock": -10.0,
+                                        "Caustic": -10.0
                                     }
                                 }
                             }
@@ -5493,6 +6554,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -5576,6 +6643,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -5703,6 +6776,36 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 0.75
@@ -5713,6 +6816,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 30
@@ -5774,6 +6883,19 @@
                                 "time": 10,
                                 "type": "Remove"
                             }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "Adrenaline",
+                                "component": "IgnoreSlowOnDamage",
+                                "time": 5
+                            }
+                        },
+                        {
+                            "!type:RemoveComponentEffect": {
+                                "component": "DelayedKnockdown",
+                                "locale": "reagent-effect-guidebook-remove-delayed-knockdown"
+                            }
                         }
                     ]
                 },
@@ -5809,6 +6931,28 @@
                 "Narcotic": {
                     "effects": [
                         {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "!type:MovespeedModifier": {
                                 "walkSpeedModifier": 1.25,
                                 "sprintSpeedModifier": 1.25
@@ -5817,6 +6961,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 20
@@ -5873,6 +7023,19 @@
                                 "type": "Local",
                                 "probability": 0.05
                             }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "Adrenaline",
+                                "component": "IgnoreSlowOnDamage",
+                                "time": 5
+                            }
+                        },
+                        {
+                            "!type:RemoveComponentEffect": {
+                                "component": "DelayedKnockdown",
+                                "locale": "reagent-effect-guidebook-remove-delayed-knockdown"
+                            }
                         }
                     ]
                 },
@@ -5909,6 +7072,28 @@
                     "metabolismRate": 1.0,
                     "effects": [
                         {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "!type:MovespeedModifier": {
                                 "walkSpeedModifier": 1.3,
                                 "sprintSpeedModifier": 1.3
@@ -5917,6 +7102,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 80
@@ -5987,6 +7178,19 @@
                                 "time": 10,
                                 "type": "Remove"
                             }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "Adrenaline",
+                                "component": "IgnoreSlowOnDamage",
+                                "time": 5
+                            }
+                        },
+                        {
+                            "!type:RemoveComponentEffect": {
+                                "component": "DelayedKnockdown",
+                                "locale": "reagent-effect-guidebook-remove-delayed-knockdown"
+                            }
                         }
                     ]
                 },
@@ -6053,6 +7257,28 @@
                 "Narcotic": {
                     "effects": [
                         {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "!type:GenericStatusEffect": {
                                 "key": "SeeingRainbows",
                                 "component": "SeeingRainbows",
@@ -6080,7 +7306,35 @@
                         "amount": -5
                     }
                 }
-            ]
+            ],
+            "metabolisms": {
+                "Narcotic": {
+                    "effects": [
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -0.2
+                                    },
+                                    "types": {
+                                        "Heat": -0.1,
+                                        "Shock": -0.1,
+                                        "Cold": -0.1,
+                                        "Radiation": -0.1
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
         },
         {
             "type": "reagent",
@@ -6095,6 +7349,28 @@
                 "Narcotic": {
                     "effects": [
                         {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "!type:MovespeedModifier": {
                                 "walkSpeedModifier": 0.65,
                                 "sprintSpeedModifier": 0.65
@@ -6102,6 +7378,14 @@
                         },
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2
@@ -6145,6 +7429,28 @@
                 "Narcotic": {
                     "effects": [
                         {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "!type:GenericStatusEffect": {
                                 "key": "SeeingRainbows",
                                 "component": "SeeingRainbows",
@@ -6169,6 +7475,28 @@
             "metabolisms": {
                 "Narcotic": {
                     "effects": [
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
                         {
                             "!type:GenericStatusEffect": {
                                 "key": "SeeingRainbows",
@@ -6198,6 +7526,12 @@
                         {
                             "!type:GenericStatusEffect": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "Nocturine",
@@ -6230,8 +7564,19 @@
                     "effects": [
                         {
                             "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "key": "Muted",
-                                "component": "Muted"
+                                "component": "Muted",
+                                "type": "Add",
+                                "time": 10,
+                                "refresh": false
                             }
                         }
                     ]
@@ -6347,7 +7692,7 @@
                                 "conditions": [
                                     {
                                         "!type:ReagentThreshold": {
-                                            "min": 15
+                                            "min": 5
                                         }
                                     }
                                 ]
@@ -6366,7 +7711,7 @@
                                 "conditions": [
                                     {
                                         "!type:ReagentThreshold": {
-                                            "min": 20
+                                            "min": 5
                                         }
                                     }
                                 ]
@@ -6388,6 +7733,28 @@
             "metabolisms": {
                 "Narcotic": {
                     "effects": [
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie"
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "groups": {
+                                        "Brute": -1
+                                    },
+                                    "types": {
+                                        "Heat": -0.5,
+                                        "Shock": -0.5,
+                                        "Cold": -0.5,
+                                        "Radiation": -0.5
+                                    }
+                                }
+                            }
+                        },
                         {
                             "!type:Emote": {
                                 "emote": "Laugh",
@@ -6464,6 +7831,91 @@
         },
         {
             "type": "reagent",
+            "id": "NitrosylPlasmide",
+            "name": "reagent-name-nitrosyl-plasmide",
+            "group": "Narcotics",
+            "desc": "reagent-desc-nitrosyl-plasmide",
+            "physicalDesc": "reagent-physical-desc-translucent",
+            "flavor": "sour",
+            "color": "#e1a116",
+            "metabolisms": {
+                "Gas": {
+                    "effects": [
+                        {
+                            "!type:Jitter": ""
+                        }
+                    ]
+                },
+                "Narcotic": {
+                    "effects": [
+                        {
+                            "!type:Jitter": ""
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "Stun",
+                                "time": 3,
+                                "type": "Remove"
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "KnockedDown",
+                                "time": 3,
+                                "type": "Remove"
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "key": "Drowsiness",
+                                "time": 10,
+                                "type": "Remove"
+                            }
+                        },
+                        {
+                            "!type:GenericStatusEffect": {
+                                "conditions": null,
+                                "key": "ForcedSleep",
+                                "type": "Remove",
+                                "time": 10
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "damage": {
+                                    "types": {
+                                        "Poison": 0.1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:RemoveComponentEffect": {
+                                "component": "DelayedKnockdown",
+                                "locale": "reagent-effect-guidebook-remove-delayed-knockdown"
+                            }
+                        }
+                    ]
+                },
+                "Medicine": {
+                    "effects": [
+                        {
+                            "!type:ResetNarcolepsy": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "reagent",
             "id": "Toxin",
             "name": "reagent-name-toxin",
             "group": "Toxins",
@@ -6488,6 +7940,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 4
@@ -6525,6 +7985,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 4
@@ -6534,6 +8002,14 @@
                         },
                         {
                             "!type:PopupMessage": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "type": "Local",
                                 "visualType": "MediumCaution",
                                 "messages": [
@@ -6567,12 +8043,28 @@
                         },
                         {
                             "!type:MovespeedModifier": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "walkSpeedModifier": 0.65,
                                 "sprintSpeedModifier": 0.65
                             }
                         },
                         {
                             "!type:GenericStatusEffect": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "key": "Drowsiness",
                                 "component": "Drowsiness",
                                 "time": 4,
@@ -6583,6 +8075,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "ChloralHydrate",
@@ -6615,6 +8113,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2
@@ -6625,6 +8131,12 @@
                         {
                             "!type:ChemVomit": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 2
@@ -6653,6 +8165,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -6990,6 +8510,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Asphyxiation": 5
@@ -7088,6 +8616,12 @@
                         {
                             "!type:HealthChange": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "min": 45
@@ -7193,6 +8727,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 3
@@ -7218,6 +8760,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 2
@@ -7277,6 +8827,12 @@
                                             "type": "Animal",
                                             "shouldHave": false
                                         }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
                                     }
                                 ],
                                 "type": "Local",
@@ -7296,6 +8852,12 @@
                                             "type": "Animal",
                                             "shouldHave": false
                                         }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
                                     }
                                 ]
                             }
@@ -7306,6 +8868,12 @@
                                     {
                                         "!type:OrganType": {
                                             "type": "Animal",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
                                             "shouldHave": false
                                         }
                                     }
@@ -7410,6 +8978,18 @@
                     "metabolismRate": 0.05,
                     "effects": [
                         {
+                            "!type:Polymorph": {
+                                "prototype": "Bananamen",
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 30
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
                             "!type:Emote": {
                                 "emote": "Honk",
                                 "showInChat": true,
@@ -7456,6 +9036,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 0.6
@@ -7481,6 +9069,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1.8
@@ -7523,6 +9119,14 @@
                         },
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "groups": {
                                         "Airloss": 2
@@ -7571,6 +9175,12 @@
                             "!type:HealthChange": {
                                 "conditions": [
                                     {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
                                         "!type:Hunger": {
                                             "max": 50
                                         }
@@ -7610,6 +9220,12 @@
                                 "conditions": [
                                     {
                                         "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
                                             "type": "Arachnid",
                                             "shouldHave": false
                                         }
@@ -7625,6 +9241,12 @@
                         {
                             "!type:MovespeedModifier": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "Mechanotoxin",
@@ -7645,6 +9267,12 @@
                         {
                             "!type:MovespeedModifier": {
                                 "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
                                     {
                                         "!type:ReagentThreshold": {
                                             "reagent": "Mechanotoxin",
@@ -7673,7 +9301,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-absinthe",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "absinthe",
             "color": "#33EE00",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/absintheglass.rsi",
@@ -7744,8 +9372,8 @@
             "name": "reagent-name-blue-curacao",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-blue-curacao",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-aromatic",
+            "flavor": "bluecuracao",
             "color": "#0099FF",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/thin_glass.rsi",
@@ -7900,6 +9528,12 @@
                                             "type": "Dwarf",
                                             "shouldHave": false
                                         }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
                                     }
                                 ],
                                 "damage": {
@@ -7919,13 +9553,13 @@
                                     },
                                     {
                                         "!type:OrganType": {
-                                            "type": "Dwarf"
+                                            "type": "Yowie"
                                         }
                                     }
                                 ],
                                 "damage": {
-                                    "types": {
-                                        "Poison": 0.2
+                                    "groups": {
+                                        "Brute": -1
                                     }
                                 }
                             }
@@ -7935,7 +9569,7 @@
                                 "conditions": [
                                     {
                                         "!type:ReagentThreshold": {
-                                            "min": 15
+                                            "min": 3
                                         }
                                     },
                                     {
@@ -7946,7 +9580,8 @@
                                 ],
                                 "damage": {
                                     "groups": {
-                                        "Brute": -1
+                                        "Brute": -1,
+                                        "Burn": -1
                                     }
                                 }
                             }
@@ -7964,6 +9599,12 @@
                                     {
                                         "!type:OrganType": {
                                             "type": "Dwarf",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
                                             "shouldHave": false
                                         }
                                     }
@@ -7986,7 +9627,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-gin",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "gin",
             "color": "#664300",
             "recognizable": true,
             "metamorphicSprite": {
@@ -8037,7 +9678,7 @@
             "name": "reagent-name-melon-liquor",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-melon-liquor",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-sweet",
             "flavor": "watermelon",
             "color": "#00FF33",
             "metamorphicSprite": {
@@ -8101,6 +9742,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -8197,7 +9846,7 @@
             "name": "reagent-name-vermouth",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-vermouth",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-aromatic",
             "flavor": "vermouth",
             "color": "#91FF91",
             "metamorphicSprite": {
@@ -8339,7 +9988,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-acid-spit",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "acidspit",
             "color": "#365000",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/acidspitglass.rsi",
@@ -8356,7 +10005,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-allies-cocktail",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "alliescocktail",
             "color": "#00664d",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/alliescocktail.rsi",
@@ -8372,8 +10021,8 @@
             "name": "reagent-name-aloe",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-aloe",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-aromatic",
+            "flavor": "aloe",
             "color": "#192c00",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/aloe.rsi",
@@ -8390,7 +10039,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-amasec",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "amasec",
             "color": "#124da7",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/amasecglass.rsi",
@@ -8407,7 +10056,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-andalusia",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "andalusia",
             "color": "#665700",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/andalusia.rsi",
@@ -8498,7 +10147,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-b52",
             "physicalDesc": "reagent-physical-desc-bubbly",
-            "flavor": "alcohol",
+            "flavor": "b52",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/b52glass.rsi",
@@ -8531,8 +10180,8 @@
             "name": "reagent-name-bahama-mama",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-bahama-mama",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-tropical",
+            "flavor": "bahamamama",
             "color": "#FF7F3B",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/bahama_mama.rsi",
@@ -8548,7 +10197,7 @@
             "name": "reagent-name-banana-honk",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-banana-honk",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-creamy",
             "flavor": "bananahonk",
             "color": "#ffff91",
             "metamorphicSprite": {
@@ -8565,8 +10214,8 @@
             "name": "reagent-name-barefoot",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-barefoot",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-creamy",
+            "flavor": "barefoot",
             "color": "#ff66cc",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/b&p.rsi",
@@ -8668,8 +10317,8 @@
             "name": "reagent-name-booger",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-booger",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-slimy",
+            "flavor": "booger",
             "color": "#99ff00",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/booger.rsi",
@@ -8686,7 +10335,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-brave-bull",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "bravebull",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/bravebullglass.rsi",
@@ -8719,8 +10368,8 @@
             "name": "reagent-name-coconut-rum",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-coconut-rum",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "rum",
+            "physicalDesc": "reagent-physical-desc-milky",
+            "flavor": "coconutrum",
             "color": "#cccbc8",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/coconutrum.rsi",
@@ -8816,8 +10465,8 @@
             "name": "reagent-name-demons-blood",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-demons-blood",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-ferrous",
+            "flavor": "demonsblood",
             "color": "#a70000",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/demonsblood.rsi",
@@ -8834,8 +10483,8 @@
             "name": "reagent-name-devils-kiss",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-devils-kiss",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-ferrous",
+            "flavor": "devilskiss",
             "color": "#ff0033",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/devilskiss.rsi",
@@ -8851,7 +10500,7 @@
             "name": "reagent-name-doctors-delight",
             "parent": "BaseDrink",
             "desc": "reagent-desc-doctors-delight",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-soothing",
             "flavor": "medicine",
             "color": "#FF8CFF",
             "metamorphicSprite": {
@@ -8879,11 +10528,7 @@
                                 "reagent": "Ethanol",
                                 "amount": 0.05
                             }
-                        }
-                    ]
-                },
-                "Medicine": {
-                    "effects": [
+                        },
                         {
                             "!type:HealthChange": {
                                 "damage": {
@@ -8907,7 +10552,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-driest-martini",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "driestmartini",
             "color": "#2E6671",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/driestmartiniglass.rsi",
@@ -8940,8 +10585,8 @@
             "name": "reagent-name-erika-surprise",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-erika-surprise",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-cloudy",
+            "flavor": "erikasurprise",
             "color": "#67bc50",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/beerstein.rsi",
@@ -8992,8 +10637,8 @@
             "name": "reagent-name-gin-fizz",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-gin-fizz",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-fizzy",
+            "flavor": "ginfizz",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/ginfizzglass.rsi",
@@ -9027,7 +10672,7 @@
             "name": "reagent-name-gin-tonic",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-gin-tonic",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-fizzy",
             "flavor": "gintonic",
             "color": "#004166",
             "metamorphicSprite": {
@@ -9063,7 +10708,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-gildlager",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "gildlager",
             "color": "#FFFF91",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/gildlagerglass.rsi",
@@ -9097,7 +10742,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-grog",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "grog",
             "color": "#e3e77b",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/beerstein.rsi",
@@ -9114,7 +10759,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-hippies-delight",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "hippiesdelight",
             "color": "#6eaa0c",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/hippiesdelightglass.rsi",
@@ -9131,7 +10776,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-hooch",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "hooch",
             "color": "#664e00"
         },
         {
@@ -9295,7 +10940,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-manhattan",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "manhattan",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/manhattanglass.rsi",
@@ -9311,8 +10956,8 @@
             "name": "reagent-name-manhattan-project",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-manhattan-project",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-overpowering",
+            "flavor": "manhattanproject",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/proj_manhattanglass.rsi",
@@ -9347,7 +10992,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-margarita",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "margarita",
             "color": "#8CFF8C",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/margaritaglass.rsi",
@@ -9364,7 +11009,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-martini",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "martini",
             "color": "#664300",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/martiniglass.rsi",
@@ -9415,8 +11060,8 @@
             "name": "reagent-name-mojito",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-mojito",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-refreshing",
+            "flavor": "mojito",
             "color": "#3ea99888",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/mojito.rsi",
@@ -9433,7 +11078,7 @@
             "name": "reagent-name-moonshine",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-moonshine",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-pungent",
             "flavor": "moonshine",
             "color": "#d1d7d155",
             "metamorphicSprite": {
@@ -9467,8 +11112,8 @@
             "name": "reagent-name-neurotoxin",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-neurotoxin",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-pungent",
+            "flavor": "neurotoxin",
             "color": "#2E2E61",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/neurotoxinglass.rsi",
@@ -9497,6 +11142,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -9546,7 +11199,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-patron",
             "physicalDesc": "reagent-physical-desc-metallic",
-            "flavor": "alcohol",
+            "flavor": "patron",
             "color": "#585840",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/patronglass.rsi",
@@ -9579,8 +11232,8 @@
             "name": "reagent-name-red-mead",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-red-mead",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-ferrous",
+            "flavor": "redmead",
             "color": "#bc5550",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/beerstein.rsi",
@@ -9598,7 +11251,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-pina-colada",
             "physicalDesc": "reagent-physical-desc-tropical",
-            "flavor": "alcohol",
+            "flavor": "pinacolada",
             "color": "#e8dba4",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/pinacolada.rsi",
@@ -9612,7 +11265,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-sbiten",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "sbiten",
             "color": "#004166",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/sbitenglass.rsi",
@@ -9628,7 +11281,7 @@
             "name": "reagent-name-screwdriver-cocktail",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-screwdriver-cocktail",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-citric",
             "flavor": "screwdriver",
             "color": "#A68310",
             "metamorphicSprite": {
@@ -9754,7 +11407,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-snow-white",
             "physicalDesc": "reagent-physical-desc-bubbly",
-            "flavor": "alcohol",
+            "flavor": "snowwhite",
             "color": "#FFFFFF",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/snowwhite.rsi",
@@ -9771,8 +11424,8 @@
             "name": "reagent-name-sui-dream",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-sui-dream",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-sweet",
+            "flavor": "suidream",
             "color": "#00A86B",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/sdreamglass.rsi",
@@ -9807,7 +11460,7 @@
             "name": "reagent-name-tequila-sunrise",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-tequila-sunrise",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-citric",
             "flavor": "tequilasunrise",
             "color": "#FFE48C",
             "metamorphicSprite": {
@@ -9899,8 +11552,8 @@
             "name": "reagent-name-toxins-special",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-toxins-special",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "physicalDesc": "reagent-physical-desc-pungent",
+            "flavor": "toxinsspecial",
             "color": "#665c00",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/toxinsspecialglass.rsi",
@@ -9917,7 +11570,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-vodka-martini",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "vodkamartini",
             "color": "#004666",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/martiniglass.rsi",
@@ -9951,7 +11604,7 @@
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-vodka-tonic",
             "physicalDesc": "reagent-physical-desc-strong-smelling",
-            "flavor": "alcohol",
+            "flavor": "vodkatonic",
             "color": "#0064C8",
             "metamorphicSprite": {
                 "sprite": "Objects/Consumable/Drinks/gintonicglass.rsi",
@@ -10020,7 +11673,7 @@
             "name": "reagent-name-whiskey-soda",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-whiskey-soda",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-fizzy",
             "flavor": "whiskeycola",
             "color": "#533600",
             "metamorphicSprite": {
@@ -10117,7 +11770,7 @@
             "name": "reagent-name-vodka-red-bool",
             "parent": "BaseAlcohol",
             "desc": "reagent-desc-vodka-red-bool",
-            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "physicalDesc": "reagent-physical-desc-bubbly",
             "flavor": "vodkaredbool",
             "color": "#c4c27655",
             "metamorphicSprite": {
@@ -10398,6 +12051,40 @@
                 }
             },
             "fizziness": 0.25
+        },
+        {
+            "type": "reagent",
+            "id": "ZombieCocktail",
+            "name": "reagent-name-zombiecocktail",
+            "parent": "BaseAlcohol",
+            "desc": "reagent-desc-zombiecocktail",
+            "physicalDesc": "reagent-physical-desc-strong-smelling",
+            "flavor": "zombiecocktail",
+            "color": "#d17844",
+            "metamorphicSprite": {
+                "sprite": "Objects/Consumable/Drinks/zombiecocktail.rsi",
+                "state": "icon_empty"
+            },
+            "metamorphicMaxFillLevels": 4,
+            "metamorphicFillBaseName": "fill-",
+            "metamorphicChangeColor": false,
+            "metabolisms": {
+                "Drink": {
+                    "effects": [
+                        {
+                            "!type:SatiateThirst": {
+                                "factor": 1
+                            }
+                        },
+                        {
+                            "!type:AdjustReagent": {
+                                "reagent": "Ethanol",
+                                "amount": 0.25
+                            }
+                        }
+                    ]
+                }
+            }
         },
         {
             "type": "reagent",
@@ -10868,6 +12555,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -11059,6 +12754,14 @@
                     "effects": [
                         {
                             "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    }
+                                ],
                                 "damage": {
                                     "types": {
                                         "Poison": 1
@@ -11742,6 +13445,16 @@
         },
         {
             "type": "reagent",
+            "id": "LemonLimeCranberry",
+            "name": "reagent-name-lemon-lime-cranberry",
+            "parent": "BaseSoda",
+            "desc": "reagent-desc-lemon-lime-cranberry",
+            "physicalDesc": "reagent-physical-desc-fizzy",
+            "flavor": "lemonlimecranberrysoda",
+            "color": "#803C53"
+        },
+        {
+            "type": "reagent",
             "id": "PwrGame",
             "name": "reagent-name-pwr-game",
             "parent": "BaseSoda",
@@ -11901,6 +13614,12 @@
                                 "conditions": [
                                     {
                                         "!type:OrganType": {
+                                            "type": "Yowie",
+                                            "shouldHave": false
+                                        }
+                                    },
+                                    {
+                                        "!type:OrganType": {
                                             "type": "Slime",
                                             "shouldHave": false
                                         }
@@ -11951,6 +13670,16 @@
         },
         {
             "type": "reagent",
+            "id": "Coldsauce",
+            "name": "reagent-name-coldsauce",
+            "group": "Foods",
+            "desc": "reagent-desc-coldsauce",
+            "physicalDesc": "reagent-physical-desc-cold",
+            "flavor": "cold",
+            "color": "skyblue"
+        },
+        {
+            "type": "reagent",
             "id": "Cornoil",
             "name": "reagent-name-cornoil",
             "group": "Foods",
@@ -11959,16 +13688,6 @@
             "flavor": "oily",
             "color": "yellow",
             "recognizable": true
-        },
-        {
-            "type": "reagent",
-            "id": "Frostoil",
-            "name": "reagent-name-frostoil",
-            "group": "Foods",
-            "desc": "reagent-desc-frostoil",
-            "physicalDesc": "reagent-physical-desc-cold",
-            "flavor": "cold",
-            "color": "skyblue"
         },
         {
             "type": "reagent",
@@ -12781,6 +14500,62 @@
                     ]
                 }
             }
+        },
+        {
+            "type": "reagent",
+            "id": "FrostOil",
+            "name": "reagent-name-frost-oil",
+            "group": "Foods",
+            "desc": "reagent-desc-frost-oil",
+            "physicalDesc": "reagent-physical-desc-oily",
+            "flavor": "cold",
+            "color": "skyblue",
+            "metabolisms": {
+                "Food": {
+                    "effects": [
+                        {
+                            "!type:AdjustReagent": {
+                                "reagent": "Nutriment",
+                                "amount": 0.75
+                            }
+                        }
+                    ]
+                },
+                "Poison": {
+                    "effects": [
+                        {
+                            "!type:AdjustTemperature": {
+                                "amount": -250
+                            }
+                        },
+                        {
+                            "!type:HealthChange": {
+                                "conditions": [
+                                    {
+                                        "!type:ReagentThreshold": {
+                                            "min": 5
+                                        }
+                                    }
+                                ],
+                                "damage": {
+                                    "types": {
+                                        "Cold": 1
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "!type:PopupMessage": {
+                                "type": "Local",
+                                "messages": [
+                                    "frost-oil-effect-light-cold"
+                                ],
+                                "probability": 0.2
+                            }
+                        }
+                    ]
+                }
+            }
         }
     ],
     "reactions": [
@@ -12802,6 +14577,26 @@
                 "Sugar": 2,
                 "CarbonDioxide": 3,
                 "Protein": 4
+            }
+        },
+        {
+            "type": "reaction",
+            "id": "InsectBloodBreakdown",
+            "source": true,
+            "requiredMixerCategories": [
+                "Centrifuge"
+            ],
+            "reactants": {
+                "InsectBlood": {
+                    "amount": 30
+                }
+            },
+            "products": {
+                "Water": 11,
+                "Saline": 6,
+                "Chlorine": 1.5,
+                "CarbonDioxide": 5.5,
+                "Protein": 6
             }
         },
         {
@@ -12856,6 +14651,25 @@
                 "Sugar": 2,
                 "CarbonDioxide": 3,
                 "Protein": 4
+            }
+        },
+        {
+            "type": "reaction",
+            "id": "AmmoniaBloodBreakdown",
+            "source": true,
+            "requiredMixerCategories": [
+                "Centrifuge"
+            ],
+            "reactants": {
+                "AmmoniaBlood": {
+                    "amount": 30
+                }
+            },
+            "products": {
+                "Water": 17,
+                "Nitrogen": 4.5,
+                "Chlorine": 2.5,
+                "Protein": 6
             }
         },
         {
@@ -13269,6 +15083,28 @@
                         "energyConsumption": 12500,
                         "duration": 15
                     }
+                }
+            ]
+        },
+        {
+            "type": "reaction",
+            "id": "Flash",
+            "impact": "High",
+            "priority": 20,
+            "reactants": {
+                "Aluminium": {
+                    "amount": 1
+                },
+                "Potassium": {
+                    "amount": 1
+                },
+                "Sulfur": {
+                    "amount": 1
+                }
+            },
+            "effects": [
+                {
+                    "!type:FlashReactionEffect": ""
                 }
             ]
         },
@@ -13919,11 +15755,11 @@
                     "amount": 1
                 },
                 "VodkaRedBool": {
-                    "amount": 2
+                    "amount": 3
                 }
             },
             "products": {
-                "BudgetInsulsDrink": 3
+                "BudgetInsulsDrink": 4
             }
         },
         {
@@ -14549,7 +16385,7 @@
                 "Beer": {
                     "amount": 10
                 },
-                "Frostoil": {
+                "FrostOil": {
                     "amount": 1
                 }
             },
@@ -14907,6 +16743,25 @@
         },
         {
             "type": "reaction",
+            "id": "NuclearColaBreakdown",
+            "source": true,
+            "requiredMixerCategories": [
+                "Centrifuge"
+            ],
+            "reactants": {
+                "NuclearCola": {
+                    "amount": 10
+                }
+            },
+            "products": {
+                "Ipecac": 2,
+                "Water": 2,
+                "Sugar": 2,
+                "Uranium": 1
+            }
+        },
+        {
+            "type": "reaction",
             "id": "Patron",
             "requiredMixerCategories": [
                 "Shake"
@@ -15142,7 +16997,7 @@
                 }
             },
             "products": {
-                "SnowWhite": 3
+                "SnowWhite": 2
             }
         },
         {
@@ -15378,14 +17233,14 @@
             "id": "WhiteRussian",
             "reactants": {
                 "BlackRussian": {
-                    "amount": 2
+                    "amount": 1
                 },
                 "Cream": {
                     "amount": 1
                 }
             },
             "products": {
-                "WhiteRussian": 3
+                "WhiteRussian": 2
             }
         },
         {
@@ -15539,6 +17394,24 @@
             },
             "products": {
                 "Cola": 4
+            }
+        },
+        {
+            "type": "reaction",
+            "id": "ZombieCocktail",
+            "reactants": {
+                "Rum": {
+                    "amount": 2
+                },
+                "Grenadine": {
+                    "amount": 1
+                },
+                "ZombieBlood": {
+                    "amount": 1
+                }
+            },
+            "products": {
+                "ZombieCocktail": 4
             }
         },
         {
@@ -15970,6 +17843,24 @@
             },
             "products": {
                 "Hotsauce": 3
+            }
+        },
+        {
+            "type": "reaction",
+            "id": "CookingColdsauce",
+            "reactants": {
+                "JuiceTomato": {
+                    "amount": 1
+                },
+                "TableSalt": {
+                    "amount": 1
+                },
+                "FrostOil": {
+                    "amount": 1
+                }
+            },
+            "products": {
+                "Coldsauce": 3
             }
         },
         {
@@ -16491,6 +18382,74 @@
                 {
                     "!type:CreateEntityReactionEffect": {
                         "entity": "MaterialGunpowder"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "reaction",
+            "id": "SolidifyGold",
+            "impact": "Low",
+            "quantized": true,
+            "reactants": {
+                "Gold": {
+                    "amount": 10
+                },
+                "FrostOil": {
+                    "amount": 5
+                }
+            },
+            "effects": [
+                {
+                    "!type:CreateEntityReactionEffect": {
+                        "entity": "IngotGold1"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "reaction",
+            "id": "SolidifySilver",
+            "impact": "Low",
+            "quantized": true,
+            "reactants": {
+                "Silver": {
+                    "amount": 10
+                },
+                "FrostOil": {
+                    "amount": 5
+                }
+            },
+            "effects": [
+                {
+                    "!type:CreateEntityReactionEffect": {
+                        "entity": "IngotSilver1"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "reaction",
+            "id": "WehHewExplosion",
+            "impact": "High",
+            "priority": 20,
+            "reactants": {
+                "JuiceThatMakesYouWeh": {
+                    "amount": 1
+                },
+                "JuiceThatMakesYouHew": {
+                    "amount": 1
+                }
+            },
+            "effects": [
+                {
+                    "!type:ExplosionReactionEffect": {
+                        "explosionType": "Radioactive",
+                        "maxIntensity": 200,
+                        "intensityPerUnit": 2,
+                        "intensitySlope": 1,
+                        "maxTotalIntensity": 250,
+                        "tileBreakScale": 1e-05
                     }
                 }
             ]
@@ -17512,7 +19471,7 @@
             "minTemp": 377,
             "reactants": {
                 "Sap": {
-                    "amount": 1.2
+                    "amount": 1
                 }
             },
             "effects": [
@@ -17523,7 +19482,7 @@
                 }
             ],
             "products": {
-                "Syrup": 0.1
+                "Syrup": 0.5
             }
         },
         {
