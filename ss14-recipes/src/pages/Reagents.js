@@ -2,10 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Card, OverlayTrigger, Tooltip, Dropdown } from 'react-bootstrap';
 
 import './../App.css';
-import { getReagentsDTO } from '../utils/reagentsDTO';
 import { BsFillQuestionCircleFill, BsArrowUpRightCircle } from "react-icons/bs";
-import { test } from '../utils/groups'
 import { Link } from 'react-router-dom';
+import reagentsFile from './../data.json';
 
 const renderTooltip = (props, content) => (
   <Tooltip id="button-tooltip" {...props}>
@@ -22,9 +21,6 @@ const BeakerSVG = ({ color }) => (
 );
 
 const ReagentCard = ({ content, reagents }) => {
-  const [hoveredItem, setHoveredItem] = useState(null); // State to track the hovered item
-  const [hoveredItemPosition, setHoveredItemPosition] = useState({ top: 0, left: 0 }); // State for hover card position
-  const cardRef = useRef(null); // Ref for the card to get its position
 
   return (
     <Card className='recipeCard' style={{
@@ -33,14 +29,15 @@ const ReagentCard = ({ content, reagents }) => {
       margin: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
       transition: 'box-shadow 0.3s ease',
-    }} ref={cardRef}>
+    }}>
       <Card.Header className='recipeHeader'>
         <BeakerSVG color={content.color} />
-        {content.name.replaceAll('-', ' ').replace('reagent name ', '')}
-
+        {content.id.replaceAll('-', ' ').replace('reagent name ', '')}
 
         <div style={{ float: 'right' }}>
-          <Link to={`/${content.id}`}><BsArrowUpRightCircle /></Link>
+          <Link to={`/recipe/${content.id}`}>
+            <BsArrowUpRightCircle />
+          </Link>
           <OverlayTrigger
             placement="top"
             delay={{ show: 250, hide: 400 }}
@@ -51,7 +48,7 @@ const ReagentCard = ({ content, reagents }) => {
         </div>
       </Card.Header>
       <Card.Body>
-        {content.hasRecipe && (
+        {/* {content.hasRecipe && (
           <div>
             <div>
               {content.recipe.map((value) => {
@@ -94,21 +91,8 @@ const ReagentCard = ({ content, reagents }) => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </Card.Body>
-      {hoveredItem && reagents.find(r => r.name === hoveredItem && r.hasRecipe) && (
-        <div style={{
-          position: 'absolute',
-          zIndex: 10,
-          marginTop: '5px',
-          top: hoveredItemPosition.top,
-          left: hoveredItemPosition.left,
-          borderRadius: '4px',
-          padding: '10px',
-        }}>
-          <ReagentCard content={reagents.find(r => r.name === hoveredItem)} reagents={reagents} />
-        </div>
-      )}
     </Card>
   );
 };
@@ -116,30 +100,23 @@ const ReagentCard = ({ content, reagents }) => {
 // const ReagentCard = ({ content }) => (<div><p>{JSON.stringify(content)}</p></div>);
 
 function Reagents() {
-  const [reagents, setReagents] = useState([]);
-  const [selectedGroup, setSelectedGroup] = useState(''); // State for selected group
-  const uniqueGroups = [...new Set(reagents.filter((a) => a.hasRecipe).map(r => r.group))]; // Get unique groups
-
-  useEffect(() => {
-    (async () => {
-      setReagents(await getReagentsDTO())
-
-      // test().then((value) => {
-      //   console.log(value)
-      // });
-
-    })();
-  }, []);
-
-  const filteredReagents = reagents.filter((reagent) =>
-    reagent.hasRecipe && (selectedGroup === '' || reagent.group === selectedGroup)
+  const [selectedGroup, setSelectedGroup] = useState('');
+  let uniqueGroups = ["Biological", "Toxins", "Medicine", "Elements"]
+  let reagents = reagentsFile.reagents;
+  const reactions = new Map(
+    reagentsFile.reactions.map(item => [item.id, item]) // Format: [key, value]
   );
+
+  console.log(reagents)
+  // const filteredReagents = reagents.filter((reagent) =>
+  //   reagent.hasRecipe && (selectedGroup === '' || reagent.group === selectedGroup)
+  // );
 
   return (
     <div>
       <h1>Reagents</h1>
 
-      <Dropdown>
+      {/* <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           {selectedGroup || 'Select Group'}
         </Dropdown.Toggle>
@@ -152,11 +129,11 @@ function Reagents() {
             </Dropdown.Item>
           ))}
         </Dropdown.Menu>
-      </Dropdown>
+      </Dropdown> */}
 
       <div className='grid'>
-        {filteredReagents
-          .filter((a) => a.hasRecipe)
+        {reagents
+          // .filter((a) => a.hasRecipe)
           .map(reagent => (
             <ReagentCard key={reagent.id} content={reagent} reagents={reagents} />
           ))}

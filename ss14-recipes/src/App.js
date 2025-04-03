@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Reagents from './pages/Reagents'
 import Recipe from './pages/Recipe'
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Reagents />} />
         <Route path="/Home" element={<Reagents />} />
-        <Route path="Recipe/:recipeName" element={<Recipe/>} />
+        <Route path="recipe/:id" element={<Recipe/>} />
       </Routes>
     </Router>
   );
