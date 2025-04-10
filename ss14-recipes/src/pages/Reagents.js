@@ -106,7 +106,7 @@ function Reagents() {
   const reactions = new Map(
     reagentsFile.reactions.map(item => [item.id, item]) // Format: [key, value]
   );
-
+  
   console.log(reagents)
   // const filteredReagents = reagents.filter((reagent) =>
   //   reagent.hasRecipe && (selectedGroup === '' || reagent.group === selectedGroup)

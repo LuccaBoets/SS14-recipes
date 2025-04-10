@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Reagents />} />
-        <Route path="/Home" element={<Reagents />} />
-        <Route path="recipe/:id" element={<Recipe/>} />
+        <Route path="SS14-recipes/" element={<Reagents />} />
+        <Route path="SS14-recipes/Home" element={<Reagents />} />
+        <Route path="SS14-recipes/recipe/:id" element={<Recipe/>} />
       </Routes>
     </Router>
   );
