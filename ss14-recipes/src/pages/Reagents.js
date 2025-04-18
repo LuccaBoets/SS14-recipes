@@ -35,7 +35,7 @@ const ReagentCard = ({ content, reagents }) => {
         {content.id.replaceAll('-', ' ').replace('reagent name ', '')}
 
         <div style={{ float: 'right' }}>
-          <Link to={`/recipe/${content.id}`}>
+          <Link to={`/SS14-recipes/recipe/${content.id}`}>
             <BsArrowUpRightCircle />
           </Link>
           <OverlayTrigger
@@ -133,7 +133,6 @@ function Reagents() {
 
       <div className='grid'>
         {reagents
-          // .filter((a) => a.hasRecipe)
           .map(reagent => (
             <ReagentCard key={reagent.id} content={reagent} reagents={reagents} />
           ))}
