@@ -1,0 +1,1523 @@
+[
+  {
+    "type": "reagent",
+    "id": "Oxygen",
+    "name": "reagent-name-oxygen",
+    "desc": "reagent-desc-oxygen",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#c4f5ff",
+    "boilingPoint": -183.0,
+    "meltingPoint": -218.4,
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Human"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Animal"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Rat"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant"
+              }
+            ]
+          },
+          {
+            "type": "ModifyLungGas",
+            "conditions": [
+              {
+                "type": "Vox",
+                "shouldHave": false
+              }
+            ],
+            "ratios": {
+              "CarbonDioxide": 1.0,
+              "Oxygen": -1.0
+            }
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "Vox"
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 3
+              }
+            }
+          },
+          {
+            "type": "AdjustAlert",
+            "alertType": "Toxins",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "min": 0.5
+              },
+              {
+                "type": "Vox"
+              }
+            ],
+            "clear": true,
+            "time": 5
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Human"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Animal"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Rat"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "ModifyLungGas",
+            "conditions": [
+              {
+                "type": "Vox",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "ratios": {
+              "CarbonDioxide": 1.0,
+              "Oxygen": -1.0
+            }
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "Vox"
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 7
+              }
+            }
+          },
+          {
+            "type": "AdjustAlert",
+            "alertType": "Toxins",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "min": 0.5
+              },
+              {
+                "type": "Vox"
+              }
+            ],
+            "clear": true,
+            "time": 5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Plasma",
+    "name": "reagent-name-plasma",
+    "desc": "reagent-desc-plasma",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#7e009e",
+    "recognizable": true,
+    "boilingPoint": -127.3,
+    "meltingPoint": -186.4,
+    "tileReactions": [
+      {
+        "type": "FlammableTileReaction",
+        "temperatureMultiplier": 1.5
+      }
+    ],
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Poison": 3
+              }
+            }
+          },
+          {
+            "type": "AdjustReagent",
+            "reagent": "Inaprovaline",
+            "amount": -2.0
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 1
+              }
+            },
+            "conditions": [
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "AdjustAlert",
+            "alertType": "Toxins",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "min": 1.5
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "clear": true,
+            "time": 5
+          }
+        ]
+      }
+    },
+    "reactiveEffects": {
+      "Flammable": {
+        "methods": [
+          "Touch"
+        ],
+        "effects": [
+          {
+            "type": "FlammableReaction",
+            "value": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Tritium",
+    "name": "reagent-name-tritium",
+    "desc": "reagent-desc-tritium",
+    "physicalDesc": "reagent-physical-desc-ionizing",
+    "flavor": "bitter",
+    "color": "#66ff33",
+    "tileReactions": [
+      {
+        "type": "FlammableTileReaction",
+        "temperatureMultiplier": 2.0
+      }
+    ],
+    "reactiveEffects": {
+      "Flammable": {
+        "methods": [
+          "Touch"
+        ],
+        "effects": [
+          {
+            "type": "FlammableReaction",
+            "multiplier": 0.8
+          }
+        ]
+      }
+    },
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Radiation": 3
+              }
+            }
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Radiation": 1
+              }
+            },
+            "conditions": [
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "AdjustAlert",
+            "alertType": "Toxins",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "min": 1.5
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "clear": true,
+            "time": 5
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "CarbonDioxide",
+    "name": "reagent-name-carbon-dioxide",
+    "desc": "reagent-desc-carbon-dioxide",
+    "physicalDesc": "reagent-physical-desc-odorless",
+    "flavor": "bitter",
+    "color": "#66ff33",
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant"
+              }
+            ]
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "Plant",
+                "shouldHave": false
+              },
+              {
+                "type": "Vox",
+                "shouldHave": false
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 0.8
+              }
+            }
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant",
+                "shouldHave": false
+              }
+            ],
+            "factor": -4
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              },
+              {
+                "type": "Plant",
+                "shouldHave": false
+              },
+              {
+                "type": "Vox",
+                "shouldHave": false
+              },
+              {
+                "type": "ReagentThreshold",
+                "min": 0.5
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 0.8
+              }
+            }
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Plant",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "factor": -4
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Nitrogen",
+    "name": "reagent-name-nitrogen",
+    "desc": "reagent-desc-nitrogen",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#a1e1ff",
+    "boilingPoint": -195.8,
+    "meltingPoint": -210.0,
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Cold": 1
+              }
+            }
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Vox"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Slime"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "ModifyLungGas",
+            "conditions": [
+              {
+                "type": "Vox"
+              }
+            ],
+            "ratios": {
+              "Ammonia": 1.0,
+              "Nitrogen": -1.0
+            }
+          },
+          {
+            "type": "ModifyLungGas",
+            "conditions": [
+              {
+                "type": "Slime"
+              }
+            ],
+            "ratios": {
+              "NitrousOxide": 1.0,
+              "Nitrogen": -1.0
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "NitrousOxide",
+    "name": "reagent-name-nitrous-oxide",
+    "desc": "reagent-desc-nitrous-oxide",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#5d88c9",
+    "boilingPoint": -88,
+    "meltingPoint": -90,
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Poison": 2
+              }
+            }
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "Emote",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 0.2,
+                "max": 0.5
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "emote": "Laugh",
+            "showInChat": true,
+            "probability": 0.1
+          },
+          {
+            "type": "Emote",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 0.2
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "emote": "Scream",
+            "showInChat": true,
+            "probability": 0.01
+          },
+          {
+            "type": "Local",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 0.5
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              }
+            ],
+            "visualType": "Medium",
+            "messages": [
+              "effect-sleepy"
+            ],
+            "probability": 0.1
+          },
+          {
+            "type": "MovespeedModifier",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 1
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "walkSpeedModifier": 0.65,
+            "sprintSpeedModifier": 0.65
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 1
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "key": "ForcedSleep",
+            "component": "ForcedSleeping",
+            "time": 200
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 1
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              }
+            ],
+            "key": "Anesthesia",
+            "component": "Anesthesia",
+            "time": 200
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "NitrousOxide",
+                "min": 3.5
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Poison": 0.25
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Frezon",
+    "name": "reagent-name-frezon",
+    "desc": "reagent-desc-frezon",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#3a758c",
+    "boilingPoint": -195.8,
+    "meltingPoint": -210.0,
+    "metabolisms": {
+      "Narcotic": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Cellular": 1
+              }
+            }
+          },
+          {
+            "type": "Add",
+            "key": "SeeingRainbows",
+            "component": "SeeingRainbows",
+            "time": 100,
+            "refresh": false
+          },
+          {
+            "type": "Drunk",
+            "boozePower": 100
+          },
+          {
+            "type": "Local",
+            "messages": [
+              "frezon-lungs-cold"
+            ],
+            "probability": 0.1,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 0.5
+              }
+            ]
+          },
+          {
+            "type": "Local",
+            "visualType": "Medium",
+            "messages": [
+              "frezon-euphoric"
+            ],
+            "probability": 0.1,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 1
+              }
+            ]
+          }
+        ]
+      },
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 0.5
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Cellular": 0.5
+              }
+            }
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 1
+              }
+            ],
+            "key": "SeeingRainbows",
+            "component": "SeeingRainbows",
+            "time": 500,
+            "refresh": false
+          },
+          {
+            "type": "Drunk",
+            "boozePower": 500,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 1
+              }
+            ]
+          },
+          {
+            "type": "Local",
+            "messages": [
+              "frezon-lungs-cold"
+            ],
+            "probability": 0.1,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 0.5
+              },
+              {
+                "type": "Thaven",
+                "shouldHave": false
+              }
+            ]
+          },
+          {
+            "type": "Local",
+            "visualType": "Medium",
+            "messages": [
+              "frezon-euphoric"
+            ],
+            "probability": 0.1,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Frezon",
+                "min": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "BZ",
+    "name": "reagent-name-bz",
+    "desc": "reagent-desc-bz",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#9370db",
+    "metabolisms": {
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "Emote",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.2
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              }
+            ],
+            "emote": "Cough",
+            "showInChat": true,
+            "probability": 0.1
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.3
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Cellular": 0.005
+              }
+            }
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.2
+              },
+              {
+                "type": "Slime",
+                "shouldHave": false
+              }
+            ],
+            "key": "SeeingRainbows",
+            "component": "SeeingRainbows",
+            "time": 9,
+            "refresh": false
+          },
+          {
+            "type": "Emote",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.2
+              },
+              {
+                "type": "Slime",
+                "shouldHave": true
+              }
+            ],
+            "emote": "Laugh",
+            "showInChat": true,
+            "probability": 0.1
+          },
+          {
+            "type": "Emote",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.2
+              },
+              {
+                "type": "Slime",
+                "shouldHave": true
+              }
+            ],
+            "emote": "Scream",
+            "showInChat": true,
+            "probability": 0.01
+          },
+          {
+            "type": "Local",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.5
+              },
+              {
+                "type": "Slime",
+                "shouldHave": true
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              }
+            ],
+            "visualType": "Medium",
+            "messages": [
+              "effect-sleepy"
+            ],
+            "probability": 0.1
+          },
+          {
+            "type": "MovespeedModifier",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 1
+              },
+              {
+                "type": "Slime",
+                "shouldHave": true
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              }
+            ],
+            "walkSpeedModifier": 0.65,
+            "sprintSpeedModifier": 0.65
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 1
+              },
+              {
+                "type": "Slime",
+                "shouldHave": true
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              }
+            ],
+            "key": "ForcedSleep",
+            "component": "ForcedSleeping",
+            "time": 10
+          },
+          {
+            "type": "AddReagentToBlood",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "BZ",
+                "min": 0.2
+              }
+            ],
+            "reagent": "BZMetabolites",
+            "amount": 1.8
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Healium",
+    "name": "reagent-name-healium",
+    "desc": "reagent-desc-healium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "strange",
+    "color": "#90560b",
+    "metabolisms": {
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "max": 24
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "groups": {
+                "Burn": -2,
+                "Toxin": -5,
+                "Brute": -2
+              }
+            }
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 24
+              }
+            ],
+            "ignoreResistances": true,
+            "damage": {
+              "groups": {
+                "Burn": -20,
+                "Toxin": -50,
+                "Brute": -20
+              }
+            }
+          },
+          {
+            "type": "Local",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 4
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.1
+              }
+            ],
+            "visualType": "Medium",
+            "messages": [
+              "effect-sleepy"
+            ],
+            "probability": 0.01
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 8
+              },
+              {
+                "type": "BloodReagentThreshold",
+                "reagent": "NitrosylPlasmide",
+                "max": 0.01
+              }
+            ],
+            "key": "ForcedSleep",
+            "component": "ForcedSleeping",
+            "time": 1
+          },
+          {
+            "type": "Drunk",
+            "boozePower": 35,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 4
+              }
+            ]
+          }
+        ]
+      },
+      "Medicine": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "groups": {
+                "Burn": -0.1,
+                "Toxin": -0.1,
+                "Brute": -0.1
+              }
+            }
+          },
+          {
+            "type": "Add",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 6
+              }
+            ],
+            "key": "ForcedSleep",
+            "component": "ForcedSleeping",
+            "time": 3
+          },
+          {
+            "type": "Drunk",
+            "boozePower": 150,
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Healium",
+                "min": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Nitrium",
+    "name": "reagent-name-nitrium",
+    "desc": "reagent-desc-nitrium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "sour",
+    "color": "#90560B",
+    "metabolisms": {
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "NitriumMovespeedModifier",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 1,
+                "max": 8
+              }
+            ],
+            "walkSpeedModifier": 1.25,
+            "sprintSpeedModifier": 1.25
+          },
+          {
+            "type": "NitriumMovespeedModifier",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 8,
+                "max": 12
+              }
+            ],
+            "walkSpeedModifier": 1.4,
+            "sprintSpeedModifier": 1.4
+          },
+          {
+            "type": "NitriumMovespeedModifier",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 12
+              }
+            ],
+            "walkSpeedModifier": 1.6,
+            "sprintSpeedModifier": 1.6
+          },
+          {
+            "type": "AddReagentToBlood",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 6
+              }
+            ],
+            "reagent": "NitrosylPlasmide",
+            "amount": 2.5
+          },
+          {
+            "type": "GenericStatusEffect",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 8
+              }
+            ],
+            "key": "Stutter",
+            "component": "StutteringAccent",
+            "time": 8
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Nitrium",
+                "min": 10
+              }
+            ],
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Asphyxiation": 15
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Pluoxium",
+    "name": "reagent-name-pluoxium",
+    "desc": "reagent-desc-pluoxium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#7b68ee",
+    "metabolisms": {
+      "Gas": {
+        "effects": [
+          {
+            "type": "Oxygenate",
+            "factor": 8,
+            "conditions": [
+              {
+                "type": "Human"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "factor": 8,
+            "conditions": [
+              {
+                "type": "Animal"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "factor": 8,
+            "conditions": [
+              {
+                "type": "Rat"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "factor": 8,
+            "conditions": [
+              {
+                "type": "Plant"
+              }
+            ]
+          },
+          {
+            "type": "Oxygenate",
+            "factor": 8,
+            "conditions": [
+              {
+                "type": "Thaven"
+              }
+            ]
+          },
+          {
+            "type": "ModifyLungGas",
+            "ratios": {
+              "CarbonDioxide": 1.0,
+              "Pluoxium": -1.0
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Hyper-Noblium",
+    "name": "reagent-name-hyper-noblium",
+    "desc": "reagent-desc-hyper-noblium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#33cccc"
+  },
+  {
+    "type": "reagent",
+    "id": "Proto-Nitrate",
+    "name": "reagent-name-proto-nitrate",
+    "desc": "reagent-desc-proto-nitrate",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#009933"
+  },
+  {
+    "type": "reagent",
+    "id": "Zauker",
+    "name": "reagent-name-zauker",
+    "desc": "reagent-desc-zauker",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#1c1a1a",
+    "metabolisms": {
+      "Gas": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Zauker",
+                "min": 0.25,
+                "max": 12
+              }
+            ],
+            "scaleByQuantity": true,
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Slash": 6,
+                "Heat": 2,
+                "Poison": 2,
+                "Bloodloss": 1
+              }
+            }
+          },
+          {
+            "type": "HealthChange",
+            "conditions": [
+              {
+                "type": "ReagentThreshold",
+                "reagent": "Zauker",
+                "min": 12
+              }
+            ],
+            "ignoreResistances": true,
+            "damage": {
+              "types": {
+                "Slash": 30,
+                "Heat": 10,
+                "Poison": 10,
+                "Bloodloss": 5
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Halon",
+    "name": "reagent-name-halon",
+    "desc": "reagent-desc-halon",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#e3574d"
+  },
+  {
+    "type": "reagent",
+    "id": "Helium",
+    "name": "reagent-name-helium",
+    "desc": "reagent-desc-helium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#005959"
+  },
+  {
+    "type": "reagent",
+    "id": "Anti-Noblium",
+    "name": "reagent-name-anti-noblium",
+    "desc": "reagent-desc-anti-noblium",
+    "physicalDesc": "reagent-physical-desc-gaseous",
+    "flavor": "bitter",
+    "color": "#525151"
+  }
+]

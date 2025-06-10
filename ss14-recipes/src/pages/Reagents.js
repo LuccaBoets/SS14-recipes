@@ -102,9 +102,9 @@ const ReagentCard = ({ content, reagents }) => {
 function Reagents() {
   const [selectedGroup, setSelectedGroup] = useState('');
   let uniqueGroups = ["Biological", "Toxins", "Medicine", "Elements"]
-  let reagents = reagentsFile.reagents;
+  let reagents = reagentsFile;
   const reactions = new Map(
-    reagentsFile.reactions.map(item => [item.id, item]) // Format: [key, value]
+    reagentsFile.map(item => [item.id, item]) // Format: [key, value]
   );
   
   console.log(reagents)

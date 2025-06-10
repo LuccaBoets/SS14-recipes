@@ -62,24 +62,65 @@ def process_file(yml_path, recipe_index):
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(processed_data, f, indent=2, ensure_ascii=False)
 
+from pathlib import Path
+import json
+
+# Assume sanitize_yaml, PROCESSORS, and default_processor are already defined
+
 def main():
     # First, collect all recipes into a dictionary indexed by id
     recipe_index = {}
-    recipes_base = Path("Resources/Prototypes/Recipes")
-    for yml_path in recipes_base.rglob("*.yml"):
-        with open(yml_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        parsed_data = sanitize_yaml(content)
-        for entry in parsed_data:
-            entry_id = entry.get('id')
-            if entry_id:
-                recipe_index[entry_id] = entry
-    
-    # Next, process all Reagents files and apply recipe linking
-    reagents_base = Path("Resources/Prototypes/Reagents")
-    for yml_path in reagents_base.rglob("*.yml"):
-        process_file(yml_path, recipe_index)
-        print(f"Processed: {yml_path}")
+    recipes_dirs = [
+        Path("Resources/Prototypes/Recipes"),
+        Path("Resources/Prototypes/_Funkystation/Recipes")
+    ]
+
+    for recipes_base in recipes_dirs:
+        for yml_path in recipes_base.rglob("*.yml"):
+            with open(yml_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            parsed_data = sanitize_yaml(content)
+            for entry in parsed_data:
+                entry_id = entry.get('id')
+                if entry_id:
+                    recipe_index[entry_id] = entry
+
+    # Accumulate all processed data here
+    all_data = []
+
+    # Process all reagents files and apply recipe linking
+    reagents_dirs = [
+        Path("Resources/Prototypes/Reagents"),
+        Path("Resources/Prototypes/_Funkystation/Reagents")
+    ]
+
+    for reagents_base in reagents_dirs:
+        for yml_path in reagents_base.rglob("*.yml"):
+            with open(yml_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            parsed_data = sanitize_yaml(content)
+            processor = PROCESSORS.get(yml_path.name, default_processor)
+            processed_data = processor(parsed_data)
+
+            # Add recipe data if available
+            for item in processed_data:
+                item_id = item.get('id')
+                if item_id in recipe_index:
+                    item['recipe'] = recipe_index[item_id]
+
+            # Save individual file JSON
+            json_path = yml_path.stem + ".json"
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(processed_data, f, indent=2, ensure_ascii=False)
+
+            # Add to the full dataset
+            all_data.extend(processed_data)
+
+            print(f"Processed: {yml_path}")
+
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(all_data, f, indent=2, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     main()

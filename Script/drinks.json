@@ -1,0 +1,83 @@
+[
+  {
+    "type": "reagent",
+    "id": "Eggnog",
+    "name": "reagent-name-eggnog",
+    "parent": "BaseDrink",
+    "desc": "reagent-desc-eggnog",
+    "physicalDesc": "reagent-physical-desc-creamy",
+    "flavor": "eggnog",
+    "color": "#F5D695",
+    "recognizable": true,
+    "metabolisms": {
+      "Drink": {
+        "effects": [
+          {
+            "type": "SatiateThirst",
+            "factor": 1
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Eggnog",
+      "requiredMixerCategories": [
+        "Shake"
+      ],
+      "reactants": {
+        "Egg": {
+          "amount": 1
+        },
+        "Milk": {
+          "amount": 5
+        },
+        "Cream": {
+          "amount": 2
+        },
+        "Sugar": {
+          "amount": 2
+        }
+      },
+      "products": {
+        "Eggnog": 10
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Peggnog",
+    "name": "reagent-name-peggnog",
+    "parent": "BaseDrink",
+    "desc": "reagent-desc-peggnog",
+    "physicalDesc": "reagent-physical-desc-creamy",
+    "flavor": "peggnog",
+    "color": "#ffca95",
+    "recognizable": true,
+    "metabolisms": {
+      "Drink": {
+        "effects": [
+          {
+            "type": "SatiateThirst",
+            "factor": 1
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Peggnog",
+      "reactants": {
+        "Eggnog": {
+          "amount": 1
+        },
+        "Cola": {
+          "amount": 2
+        }
+      },
+      "products": {
+        "Peggnog": 3
+      }
+    }
+  }
+]

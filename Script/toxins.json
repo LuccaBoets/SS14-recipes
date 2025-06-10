@@ -1,0 +1,180 @@
+[
+  {
+    "type": "reagent",
+    "id": "Heparin",
+    "name": "reagent-name-heparin",
+    "group": "Toxins",
+    "desc": "reagent-desc-heparin",
+    "physicalDesc": "reagent-physical-desc-shiny",
+    "flavor": "sharp",
+    "color": "#f9cab3",
+    "reactiveEffects": null,
+    "metabolisms": {
+      "Poison": {
+        "metabolismRate": 2.0,
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Bloodloss": 4
+              }
+            }
+          },
+          {
+            "type": "ModifyBleedAmount",
+            "amount": 6
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Heparin",
+      "reactants": {
+        "TableSalt": {
+          "amount": 1
+        },
+        "Aluminium": {
+          "amount": 1
+        },
+        "Ethanol": {
+          "amount": 1
+        },
+        "Lithium": {
+          "amount": 1
+        }
+      },
+      "products": {
+        "Heparin": 4
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Rhigoxane",
+    "name": "reagent-name-rhigoxane",
+    "group": "Toxins",
+    "desc": "reagent-desc-rhigoxane",
+    "physicalDesc": "reagent-physical-desc-refreshing",
+    "flavor": "antifreeze",
+    "color": "#34b3c9",
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Cold": 1
+              }
+            }
+          },
+          {
+            "type": "AdjustTemperature",
+            "amount": -25000
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Rhigoxane",
+      "reactants": {
+        "Plasma": {
+          "amount": 1
+        },
+        "Nitrogen": {
+          "amount": 3
+        },
+        "Water": {
+          "amount": 1
+        }
+      },
+      "products": {
+        "Rhigoxane": 3
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Spewium",
+    "name": "reagent-name-spewium",
+    "group": "Toxins",
+    "desc": "reagent-desc-spewium",
+    "physicalDesc": "reagent-physical-desc-overpowering",
+    "flavor": "horrible",
+    "color": "#2e4404",
+    "metabolisms": {
+      "Poison": {
+        "effects": [
+          {
+            "type": "ChemVomit",
+            "probability": 0.5
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Spewium",
+      "reactants": {
+        "Ipecac": {
+          "amount": 1
+        },
+        "PenteticAcid": {
+          "amount": 1
+        },
+        "Licoxide": {
+          "amount": 1
+        }
+      },
+      "products": {
+        "Spewium": 3
+      }
+    }
+  },
+  {
+    "type": "reagent",
+    "id": "Pestiline",
+    "name": "reagent-name-pestiline",
+    "group": "Toxins",
+    "desc": "reagent-desc-pestiline",
+    "flavor": "punishment",
+    "color": "#cf3600",
+    "physicalDesc": "reagent-physical-desc-sickly",
+    "metabolisms": {
+      "Poison": {
+        "metabolismRate": 0.02,
+        "effects": [
+          {
+            "type": "HealthChange",
+            "damage": {
+              "types": {
+                "Cellular": 0.4
+              }
+            }
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "type": "reaction",
+      "id": "Pestiline",
+      "reactants": {
+        "Salbutamol": {
+          "amount": 1
+        },
+        "PenteticAcid": {
+          "amount": 1
+        },
+        "Arithrazine": {
+          "amount": 2
+        }
+      },
+      "products": {
+        "Pestiline": 2
+      }
+    }
+  }
+]
